@@ -272,6 +272,99 @@ class Pipeline:
 		
 		return palette
 	
+	# ==================== Text Extraction ====================
+	
+	def load_table(self, tbl_path: Path) -> Dict[int, str]:
+		"""Load character table from .tbl file"""
+		char_table: Dict[int, str] = {}
+		
+		with open(tbl_path, 'r', encoding='utf-8') as f:
+			for line in f:
+				line = line.strip()
+				if not line or '=' not in line:
+					continue
+				
+				parts = line.split('=', 1)
+				if len(parts) != 2:
+					continue
+				
+				hex_str, char = parts
+				try:
+					byte_val = int(hex_str, 16)
+					# Skip placeholder entries
+					if char and char != '#':
+						char_table[byte_val] = char
+				except ValueError:
+					continue
+		
+		return char_table
+	
+	def decode_text(
+		self, 
+		offset: int, 
+		length: int, 
+		char_table: Dict[int, str],
+		terminator: int = 0x00
+	) -> str:
+		"""Decode text from ROM using character table"""
+		data = self.extract_bytes(offset, length)
+		result = []
+		
+		for byte in data:
+			if byte == terminator:
+				break
+			if byte in char_table:
+				result.append(char_table[byte])
+			else:
+				result.append(f'[{byte:02X}]')
+		
+		return ''.join(result)
+	
+	def extract_text_table(
+		self,
+		offset: int,
+		count: int,
+		entry_size: int,
+		char_table: Dict[int, str],
+		terminator: int = 0x00
+	) -> List[str]:
+		"""Extract table of fixed-length text entries"""
+		entries = []
+		
+		for i in range(count):
+			entry_offset = offset + (i * entry_size)
+			text = self.decode_text(entry_offset, entry_size, char_table, terminator)
+			entries.append(text.strip())
+		
+		return entries
+	
+	def extract_pointer_text(
+		self,
+		ptr_table_offset: int,
+		count: int,
+		char_table: Dict[int, str],
+		bank_offset: int = 0,
+		ptr_size: int = 2,
+		max_length: int = 256
+	) -> List[str]:
+		"""Extract text using pointer table"""
+		entries = []
+		ptr_data = self.extract_bytes(ptr_table_offset, count * ptr_size)
+		
+		for i in range(count):
+			if ptr_size == 2:
+				ptr = struct.unpack('<H', ptr_data[i*2:i*2+2])[0]
+			elif ptr_size == 3:
+				ptr = ptr_data[i*3] | (ptr_data[i*3+1] << 8) | (ptr_data[i*3+2] << 16)
+			else:
+				ptr = ptr_data[i]
+			
+			text_offset = bank_offset + ptr
+			text = self.decode_text(text_offset, max_length, char_table)
+			entries.append(text)
+		
+		return entries
+	
 	# ==================== Verification ====================
 	
 	def verify_checksums(self, expected: Dict[str, str]) -> Dict[str, bool]:
@@ -311,6 +404,7 @@ class Pipeline:
 		results = {
 			'graphics': [],
 			'palettes': [],
+			'text': [],
 			'errors': []
 		}
 		
@@ -320,8 +414,10 @@ class Pipeline:
 		# Create output directories
 		graphics_dir = config.output_dir / 'graphics'
 		palettes_dir = config.output_dir / 'palettes'
+		text_dir = config.output_dir / 'text'
 		graphics_dir.mkdir(parents=True, exist_ok=True)
 		palettes_dir.mkdir(parents=True, exist_ok=True)
+		text_dir.mkdir(parents=True, exist_ok=True)
 		
 		# Extract graphics regions
 		for region in config.regions:

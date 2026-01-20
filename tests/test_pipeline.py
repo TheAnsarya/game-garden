@@ -303,6 +303,7 @@ class TestFFMQData(unittest.TestCase):
 	
 	def setUp(self):
 		self.data_dir = Path(__file__).parent.parent / 'games' / 'snes' / 'ffmq' / 'assets' / 'editable' / 'data'
+		self.text_dir = Path(__file__).parent.parent / 'games' / 'snes' / 'ffmq' / 'assets' / 'editable' / 'text'
 	
 	def test_enemies_json_valid(self):
 		"""Validate enemies.json structure"""
@@ -367,6 +368,117 @@ class TestFFMQData(unittest.TestCase):
 		
 		self.assertIn('attacks', data)
 		self.assertGreater(len(data['attacks']), 0)
+	
+	def test_simple_tbl_exists(self):
+		"""Check simple.tbl exists"""
+		tbl_path = self.text_dir / 'simple.tbl'
+		self.assertTrue(tbl_path.exists(), "simple.tbl not found")
+	
+	def test_complex_tbl_exists(self):
+		"""Check complex.tbl exists"""
+		tbl_path = self.text_dir / 'complex.tbl'
+		self.assertTrue(tbl_path.exists(), "complex.tbl not found")
+
+
+class TestTextExtraction(unittest.TestCase):
+	"""Test text extraction functionality"""
+	
+	def setUp(self):
+		self.pipeline = Pipeline()
+	
+	def test_load_table_basic(self):
+		"""Test loading a TBL file"""
+		# Create a temp TBL file
+		with tempfile.NamedTemporaryFile(mode='w', suffix='.tbl', delete=False, encoding='utf-8') as f:
+			f.write("90=0\n")
+			f.write("91=1\n")
+			f.write("9A=A\n")
+			f.write("9B=B\n")
+			f.write("B4=a\n")
+			f.write("00=[END]\n")
+			temp_path = f.name
+		
+		try:
+			table = self.pipeline.load_table(Path(temp_path))
+			self.assertEqual(table[0x90], '0')
+			self.assertEqual(table[0x91], '1')
+			self.assertEqual(table[0x9A], 'A')
+			self.assertEqual(table[0xB4], 'a')
+			self.assertEqual(table[0x00], '[END]')
+		finally:
+			os.unlink(temp_path)
+	
+	def test_decode_text_simple(self):
+		"""Test decoding text with character table"""
+		# Create test ROM data
+		test_data = bytes([0x9A, 0x9B, 0x9C, 0x00])  # "ABC\0"
+		
+		with tempfile.NamedTemporaryFile(suffix='.bin', delete=False) as f:
+			# Pad to 32KB
+			f.write(test_data + b'\x00' * (0x8000 - len(test_data)))
+			temp_path = f.name
+		
+		try:
+			self.pipeline.load_rom(Path(temp_path))
+			
+			# Simple table mapping
+			table = {0x9A: 'A', 0x9B: 'B', 0x9C: 'C'}
+			text = self.pipeline.decode_text(0, 10, table)
+			
+			self.assertEqual(text, 'ABC')
+		finally:
+			os.unlink(temp_path)
+	
+	def test_extract_text_table(self):
+		"""Test extracting fixed-size text table"""
+		# Create ROM with 3 entries of 4 bytes each
+		entries = [
+			bytes([0x9A, 0x9B, 0x9C, 0x00]),  # ABC
+			bytes([0x9D, 0x9E, 0x9F, 0x00]),  # DEF
+			bytes([0x90, 0x91, 0x92, 0x00]),  # 012
+		]
+		test_data = b''.join(entries)
+		
+		with tempfile.NamedTemporaryFile(suffix='.bin', delete=False) as f:
+			f.write(test_data + b'\x00' * (0x8000 - len(test_data)))
+			temp_path = f.name
+		
+		try:
+			self.pipeline.load_rom(Path(temp_path))
+			
+			# Table mapping
+			table = {
+				0x9A: 'A', 0x9B: 'B', 0x9C: 'C',
+				0x9D: 'D', 0x9E: 'E', 0x9F: 'F',
+				0x90: '0', 0x91: '1', 0x92: '2'
+			}
+			
+			texts = self.pipeline.extract_text_table(0, 3, 4, table)
+			
+			self.assertEqual(len(texts), 3)
+			self.assertEqual(texts[0], 'ABC')
+			self.assertEqual(texts[1], 'DEF')
+			self.assertEqual(texts[2], '012')
+		finally:
+			os.unlink(temp_path)
+	
+	def test_decode_unknown_bytes(self):
+		"""Test handling of unknown bytes in text"""
+		test_data = bytes([0x9A, 0xFF, 0x9B, 0x00])
+		
+		with tempfile.NamedTemporaryFile(suffix='.bin', delete=False) as f:
+			f.write(test_data + b'\x00' * (0x8000 - len(test_data)))
+			temp_path = f.name
+		
+		try:
+			self.pipeline.load_rom(Path(temp_path))
+			table = {0x9A: 'A', 0x9B: 'B'}
+			text = self.pipeline.decode_text(0, 10, table)
+			
+			# Unknown byte 0xFF should be formatted as [FF]
+			self.assertEqual(text, 'A[FF]B')
+		finally:
+			os.unlink(temp_path)
 
 
 def run_tests():
@@ -382,6 +494,7 @@ def run_tests():
 	suite.addTests(loader.loadTestsFromTestCase(TestVerification))
 	suite.addTests(loader.loadTestsFromTestCase(TestImageConversion))
 	suite.addTests(loader.loadTestsFromTestCase(TestFFMQData))
+	suite.addTests(loader.loadTestsFromTestCase(TestTextExtraction))
 	
 	# Run tests
 	runner = unittest.TextTestRunner(verbosity=2)

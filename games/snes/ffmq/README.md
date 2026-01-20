@@ -12,8 +12,9 @@
 | ROM Verified | ✅ | CRC32: `2c52c792` |
 | Disassembly | ❌ | Pending - use Peony |
 | Metadata | ❌ | Pansy file pending |
-| Graphics | ✅ | 6 tile sheets extracted to PNG |
-| Text | 🔄 | Partial - text system documented |
+| Graphics | ✅ | 10 tile regions extracted to PNG |
+| Palettes | ✅ | 81 palettes (1544 colors) |
+| Text | ✅ | Table files (simple.tbl, complex.tbl) |
 | Data | ✅ | Enemies, attacks, spells, maps, NPCs |
 | Rebuild | ❌ | Byte-identical pending |
 
@@ -35,6 +36,44 @@ All data in `assets/editable/data/`:
 | `chests.json` | varies | Treasure chest contents |
 | `encounters.json` | varies | Enemy encounter data |
 | `element_types.json` | 8 | Fire, Water, Earth, Wind, etc. |
+
+## 🎨 Extracted Graphics
+
+All graphics in `assets/extracted/graphics/`:
+
+| File | Tiles | BPP | Description |
+|------|-------|-----|-------------|
+| `font_2bpp.png` | 128 | 2 | Font tiles |
+| `extra_tiles.png` | 192 | 4 | Extra tile set |
+| `main_tiles_bank1.png` | 512 | 4 | Main tiles (bank 1) |
+| `main_tiles_bank2.png` | 512 | 4 | Main tiles (bank 2) |
+| `sprite_tiles.png` | 512 | 4 | Sprite graphics |
+| `graphics_03f000.png` | 256 | 4 | Graphics bank $03F000 |
+| `graphics_064000.png` | 256 | 4 | Graphics bank $064000 |
+| `graphics_06b000.png` | 256 | 4 | Graphics bank $06B000 |
+| `graphics_071000.png` | 256 | 4 | Graphics bank $071000 |
+| `graphics_076000.png` | 256 | 4 | Graphics bank $076000 |
+
+## 🎨 Palettes
+
+All palettes in `assets/editable/palettes/`:
+
+| File | Count | Description |
+|------|-------|-------------|
+| `all_palettes.json` | 81 | All game palettes (1544 colors) |
+| `enemy_palettes.json` | - | Enemy sprite palettes |
+| `character_palettes.json` | - | Player character palettes |
+| `bg_palettes.json` | - | Background palettes |
+| `battle_bg_palettes.json` | - | Battle background palettes |
+
+## 📝 Text Resources
+
+All text tables in `assets/editable/text/`:
+
+| File | Description |
+|------|-------------|
+| `simple.tbl` | Simple text encoding (items, names, menus) |
+| `complex.tbl` | Complex text encoding (DTE compressed dialog) |
 
 ## 🔗 Related Projects
 
