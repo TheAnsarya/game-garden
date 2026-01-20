@@ -9,15 +9,32 @@
 
 | Phase | Status | Notes |
 |-------|--------|-------|
-| ROM Verified | ✅ | CRC32: 2c52c792 |
-| Disassembly | ❌ | Source extracted |
-| Metadata | ❌ | Pansy file created |
+| ROM Verified | ✅ | CRC32: `2c52c792` |
+| Disassembly | ❌ | Pending - use Peony |
+| Metadata | ❌ | Pansy file pending |
 | Graphics | ✅ | 6 tile sheets extracted to PNG |
-| Text | 🔄 | Partial - character/spell data |
-| Data | ✅ | Characters, spells, elements |
-| Rebuild | ❌ | Byte-identical |
+| Text | 🔄 | Partial - text system documented |
+| Data | ✅ | Enemies, attacks, spells, maps, NPCs |
+| Rebuild | ❌ | Byte-identical pending |
 
 Legend: ✅ Complete | 🔄 In Progress | ❌ Not Started
+
+## 📦 Extracted Data
+
+All data in `assets/editable/data/`:
+
+| File | Entries | Description |
+|------|---------|-------------|
+| `enemies.json` | 83 | Full enemy stats (HP, ATK, DEF, weaknesses) |
+| `attacks.json` | 169 | Battle actions with power and animation |
+| `spells.json` | 16 | Core spell data |
+| `spells_full.json` | 16 | Extended spell data with types |
+| `characters.json` | 4 | Benjamin, Kaeli, Phoebe, Reuben |
+| `maps.json` | 7+ | Map headers with tileset/music IDs |
+| `npcs.json` | varies | NPC positions and behavior |
+| `chests.json` | varies | Treasure chest contents |
+| `encounters.json` | varies | Enemy encounter data |
+| `element_types.json` | 8 | Fire, Water, Earth, Wind, etc. |
 
 ## 🔗 Related Projects
 
@@ -28,9 +45,9 @@ Legend: ✅ Complete | 🔄 In Progress | ❌ Not Started
 
 ```powershell
 # Verify ROM
-.\verify\verify.ps1 -RomPath "C:\~reference-roms\snes\Final Fantasy - Mystic Quest (U) (V1.1).sfc"
+.\verify\verify.ps1 -RomPath "C:\~reference-roms\extracted\snes\ffmq\Final Fantasy - Mystic Quest (U) (V1.1).smc"
 
-# Build ROM
+# Build ROM (when disassembly complete)
 .\build.ps1
 ```
 
@@ -38,12 +55,18 @@ Legend: ✅ Complete | 🔄 In Progress | ❌ Not Started
 
 ```
 ffmq/
-├── src/            # Disassembled source (.pasm)
-├── metadata/       # Pansy metadata files
-├── assets/         # Extracted and editable assets
-├── build/          # Build output (gitignored)
-├── verify/         # ROM verification
-└── docs/           # Game documentation
+├── src/                    # Disassembled source (.pasm) - pending
+├── metadata/               # Pansy metadata files - pending
+├── assets/
+│   ├── extracted/          # Raw binary assets (gitignored)
+│   └── editable/
+│       ├── graphics/       # PNG tile sheets with metadata
+│       └── data/           # JSON game data (18 files)
+├── build/                  # Build output (gitignored)
+├── verify/                 # ROM verification scripts
+│   └── checksums.json      # Expected ROM checksums
+└── docs/
+    └── rom-map.md          # Comprehensive ROM documentation
 ```
 
 ## 📝 Notes
@@ -53,11 +76,22 @@ Final Fantasy: Mystic Quest (known as Mystic Quest Legend in PAL regions) is a 1
 developed by Square for the SNES. It was designed as an entry-level RPG for Western audiences.
 
 ### Technical Details
-- CPU: 65816 (SNES)
-- ROM Size: 512 KB (4 Mbit)
-- SRAM: None
-- Special Chips: None
+- **CPU:** 65816 (SNES)
+- **Mapping:** LoROM
+- **ROM Size:** 512 KB (4 Mbit)
+- **SRAM:** 8 KB (battery backed)
+- **Special Chips:** None
+
+### Key ROM Addresses
+| Address | Contents |
+|---------|----------|
+| $02:C275 | Enemy stats (83 × 14 bytes) |
+| $02:BC78 | Attack data (169 × 7 bytes) |
+| $06:0F36 | Spell data |
+| $06:50B0 | Character data (4 × 80 bytes) |
+| $04:F000 | Item names text |
 
 ### Resources
-- ffmq-info project has extensive documentation
-- Existing disassembly work can be leveraged
+- ffmq-info has extensive extraction tools and documentation
+- GameInfo provides ROM analysis infrastructure
+- See [rom-map.md](docs/rom-map.md) for complete memory map
