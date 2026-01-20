@@ -11,24 +11,71 @@
 		"header": false,
 		"mapping": "lorom"
 	},
-	"notes": "FFMQ is a 4Mbit (512KB) LoROM game. All offsets are file offsets (no header).",
+	"notes": "FFMQ is a 4Mbit (512KB) LoROM game. Graphics locations from ffmq-info research.",
 	"palettes": [
 		{
-			"name": "grayscale_4bpp",
-			"offset": "0x000000",
-			"colors": 16,
-			"description": "Default grayscale palette for 4bpp graphics extraction",
-			"generated": true
+			"name": "main_palettes",
+			"offset": "0x038000",
+			"colors": 256,
+			"description": "Main game color palettes (from $07:8000)"
 		}
 	],
 	"graphics": [
+		{
+			"name": "font_2bpp",
+			"offset": "0x007000",
+			"tiles": 128,
+			"bpp": 2,
+			"tiles_per_row": 16,
+			"description": "Font/text tiles (2BPP)"
+		},
+		{
+			"name": "extra_tiles",
+			"offset": "0x020000",
+			"tiles": 192,
+			"bpp": 4,
+			"tiles_per_row": 16,
+			"description": "Extra background tiles ($04:8000)"
+		},
+		{
+			"name": "main_tiles_bank1",
+			"offset": "0x028c80",
+			"tiles": 512,
+			"bpp": 4,
+			"tiles_per_row": 16,
+			"description": "Main background tiles bank 1 ($05:8C80)"
+		},
+		{
+			"name": "main_tiles_bank2",
+			"offset": "0x030c80",
+			"tiles": 512,
+			"bpp": 4,
+			"tiles_per_row": 16,
+			"description": "Main background tiles bank 2"
+		},
+		{
+			"name": "sprite_tiles",
+			"offset": "0x03b013",
+			"tiles": 512,
+			"bpp": 4,
+			"tiles_per_row": 16,
+			"description": "Sprite graphics data ($07:B013)"
+		},
+		{
+			"name": "graphics_03f000",
+			"offset": "0x03f000",
+			"tiles": 256,
+			"bpp": 4,
+			"tiles_per_row": 16,
+			"description": "Graphics region at 0x3F000"
+		},
 		{
 			"name": "graphics_064000",
 			"offset": "0x064000",
 			"tiles": 256,
 			"bpp": 4,
 			"tiles_per_row": 16,
-			"description": "Graphics region at 0x64000 (possible sprites/tiles)"
+			"description": "Graphics region at 0x64000"
 		},
 		{
 			"name": "graphics_06b000",
@@ -53,31 +100,34 @@
 			"bpp": 4,
 			"tiles_per_row": 16,
 			"description": "Graphics region at 0x76000"
-		},
-		{
-			"name": "font_2bpp",
-			"offset": "0x007000",
-			"tiles": 128,
-			"bpp": 2,
-			"tiles_per_row": 16,
-			"description": "Possible 2bpp font/text graphics"
-		},
-		{
-			"name": "graphics_03f000",
-			"offset": "0x03f000",
-			"tiles": 256,
-			"bpp": 4,
-			"tiles_per_row": 16,
-			"description": "Graphics region at 0x3F000"
 		}
 	],
-	"data": [
-		{
-			"name": "rom_header",
-			"offset": "0x007fc0",
-			"size": 64,
-			"format": "snes_header",
-			"description": "SNES ROM header"
+	"text": {
+		"item_names": {
+			"offset": "0x04f000",
+			"count": 256,
+			"max_length": 12,
+			"description": "Item name strings"
 		}
-	]
+	},
+	"data": {
+		"enemies": {
+			"offset": "0x013c75",
+			"count": 83,
+			"entry_size": 14,
+			"description": "Enemy stats table"
+		},
+		"attacks": {
+			"offset": "0x013c78",
+			"count": 169,
+			"entry_size": 7,
+			"description": "Battle action data"
+		},
+		"characters": {
+			"offset": "0x0350b0",
+			"count": 4,
+			"entry_size": 80,
+			"description": "Character data"
+		}
+	}
 }

@@ -48,7 +48,7 @@
 ### SNES Games
 | Game | Status | Disasm | Assets | Rebuild |
 |------|--------|--------|--------|---------|
-| Final Fantasy: Mystic Quest | 🔄 | 🔄 | 🔄 | ❌ |
+| [Final Fantasy: Mystic Quest](games/snes/ffmq/) | 🔄 | ❌ | ✅ | ❌ |
 
 ### Game Boy Games
 | Game | Status | Disasm | Assets | Rebuild |
