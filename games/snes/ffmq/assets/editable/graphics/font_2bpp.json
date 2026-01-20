@@ -1,0 +1,9 @@
+{
+	"name": "font_2bpp",
+	"offset": "0x007000",
+	"tiles": 128,
+	"bpp": 2,
+	"palette": null,
+	"tile_size": 8,
+	"tiles_per_row": 16
+}

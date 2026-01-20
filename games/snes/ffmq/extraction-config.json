@@ -1,0 +1,83 @@
+{
+	"$schema": "https://game-garden.example.com/schemas/extraction-config.json",
+	"game": {
+		"name": "Final Fantasy: Mystic Quest",
+		"platform": "snes",
+		"region": "US",
+		"version": "V1.1"
+	},
+	"rom": {
+		"size": 524288,
+		"header": false,
+		"mapping": "lorom"
+	},
+	"notes": "FFMQ is a 4Mbit (512KB) LoROM game. All offsets are file offsets (no header).",
+	"palettes": [
+		{
+			"name": "grayscale_4bpp",
+			"offset": "0x000000",
+			"colors": 16,
+			"description": "Default grayscale palette for 4bpp graphics extraction",
+			"generated": true
+		}
+	],
+	"graphics": [
+		{
+			"name": "graphics_064000",
+			"offset": "0x064000",
+			"tiles": 256,
+			"bpp": 4,
+			"tiles_per_row": 16,
+			"description": "Graphics region at 0x64000 (possible sprites/tiles)"
+		},
+		{
+			"name": "graphics_06b000",
+			"offset": "0x06b000",
+			"tiles": 256,
+			"bpp": 4,
+			"tiles_per_row": 16,
+			"description": "Graphics region at 0x6B000"
+		},
+		{
+			"name": "graphics_071000",
+			"offset": "0x071000",
+			"tiles": 512,
+			"bpp": 4,
+			"tiles_per_row": 16,
+			"description": "Graphics region at 0x71000"
+		},
+		{
+			"name": "graphics_076000",
+			"offset": "0x076000",
+			"tiles": 512,
+			"bpp": 4,
+			"tiles_per_row": 16,
+			"description": "Graphics region at 0x76000"
+		},
+		{
+			"name": "font_2bpp",
+			"offset": "0x007000",
+			"tiles": 128,
+			"bpp": 2,
+			"tiles_per_row": 16,
+			"description": "Possible 2bpp font/text graphics"
+		},
+		{
+			"name": "graphics_03f000",
+			"offset": "0x03f000",
+			"tiles": 256,
+			"bpp": 4,
+			"tiles_per_row": 16,
+			"description": "Graphics region at 0x3F000"
+		}
+	],
+	"data": [
+		{
+			"name": "rom_header",
+			"offset": "0x007fc0",
+			"size": 64,
+			"format": "snes_header",
+			"description": "SNES ROM header"
+		}
+	]
+}

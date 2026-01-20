@@ -1,0 +1,9 @@
+{
+	"name": "graphics_076000",
+	"offset": "0x076000",
+	"tiles": 512,
+	"bpp": 4,
+	"palette": null,
+	"tile_size": 8,
+	"tiles_per_row": 16
+}

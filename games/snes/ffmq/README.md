@@ -12,9 +12,9 @@
 | ROM Verified | ✅ | CRC32: 2c52c792 |
 | Disassembly | ❌ | Source extracted |
 | Metadata | ❌ | Pansy file created |
-| Graphics | ❌ | Extracted & editable |
-| Text | ❌ | Extracted & editable |
-| Data | ❌ | Extracted & editable |
+| Graphics | ✅ | 6 tile sheets extracted to PNG |
+| Text | 🔄 | Partial - character/spell data |
+| Data | ✅ | Characters, spells, elements |
 | Rebuild | ❌ | Byte-identical |
 
 Legend: ✅ Complete | 🔄 In Progress | ❌ Not Started

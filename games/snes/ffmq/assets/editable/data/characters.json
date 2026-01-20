@@ -1,0 +1,111 @@
+{
+  "version": "1.0.0",
+  "description": "Final Fantasy Mystic Quest - Character Data",
+  "characters": [
+    {
+      "id": 0,
+      "name": "Benjamin",
+      "starting_level": 1,
+      "starting_experience": 0,
+      "base_stats": {
+        "hp": 40,
+        "mp": 40,
+        "strength": 12,
+        "defense": 8,
+        "speed": 10,
+        "magic": 7,
+        "accuracy": 6,
+        "evade": 8,
+        "magic_defense": 10
+      },
+      "starting_equipment": {
+        "weapon": 0,
+        "shield": 0,
+        "armor": 0,
+        "helmet": 0,
+        "accessory": 7
+      },
+      "rom_address": "$0650B0"
+    },
+    {
+      "id": 1,
+      "name": "Kaeli",
+      "starting_level": 3,
+      "starting_experience": 0,
+      "base_stats": {
+        "hp": 120,
+        "mp": 120,
+        "strength": 29,
+        "defense": 11,
+        "speed": 14,
+        "magic": 11,
+        "accuracy": 11,
+        "evade": 11,
+        "magic_defense": 9
+      },
+      "starting_equipment": {
+        "weapon": 0,
+        "shield": 0,
+        "armor": 129,
+        "helmet": 0,
+        "accessory": 11
+      },
+      "rom_address": "$065100"
+    },
+    {
+      "id": 2,
+      "name": "Phoebe",
+      "starting_level": 7,
+      "starting_experience": 0,
+      "base_stats": {
+        "hp": 360,
+        "mp": 360,
+        "strength": 32,
+        "defense": 33,
+        "speed": 16,
+        "magic": 23,
+        "accuracy": 10,
+        "evade": 28,
+        "magic_defense": 16
+      },
+      "starting_equipment": {
+        "weapon": 0,
+        "shield": 0,
+        "armor": 130,
+        "helmet": 0,
+        "accessory": 28
+      },
+      "rom_address": "$065150"
+    },
+    {
+      "id": 3,
+      "name": "Reuben",
+      "starting_level": 15,
+      "starting_experience": 0,
+      "base_stats": {
+        "hp": 680,
+        "mp": 680,
+        "strength": 36,
+        "defense": 36,
+        "speed": 54,
+        "magic": 47,
+        "accuracy": 20,
+        "evade": 36,
+        "magic_defense": 49
+      },
+      "starting_equipment": {
+        "weapon": 0,
+        "shield": 0,
+        "armor": 131,
+        "helmet": 0,
+        "accessory": 47
+      },
+      "rom_address": "$0651A0"
+    }
+  ],
+  "metadata": {
+    "rom_base_address": "$0650B0",
+    "entry_size": 80,
+    "character_count": 4
+  }
+}
