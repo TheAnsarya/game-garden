@@ -1,0 +1,23 @@
+{
+	"$schema": "https://game-garden.example.com/schemas/build-config.json",
+	"project": {
+		"name": "Final Fantasy: Mystic Quest",
+		"shortName": "ffmq",
+		"platform": "snes",
+		"version": "1.0.0"
+	},
+	"source": {
+		"assembler": "poppy",
+		"mainFile": "src/main.pasm",
+		"includes": ["src/", "src/includes/"],
+		"outputRom": "build/ffmq.sfc"
+	},
+	"assets": {
+		"extractDir": "assets/extracted",
+		"editableDir": "assets/editable",
+		"binaryDir": "assets/binary"
+	},
+	"metadata": {
+		"pansyFile": "metadata/ffmq.pansy"
+	}
+}

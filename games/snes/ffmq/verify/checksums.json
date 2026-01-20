@@ -1,0 +1,12 @@
+{
+	"name": "Final Fantasy: Mystic Quest",
+	"platform": "snes",
+	"region": "US",
+	"version": "V1.1",
+	"crc32": "2c52c792",
+	"md5": "f7faeae5a847c098d677070920769ca2",
+	"sha256": "f71817f55febd32fd1dce617a326a77b6b062dd0d4058ecd289f64af1b7a1d05",
+	"size": 524288,
+	"romFile": "Final Fantasy - Mystic Quest (U) (V1.1).sfc",
+	"notes": "US V1.1 release - checksums verified from ffmq-info project"
+}
