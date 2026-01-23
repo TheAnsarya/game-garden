@@ -10,7 +10,7 @@
 | Phase | Status | Notes |
 |-------|--------|-------|
 | ROM Verified | ✅ | CRC32: `2c52c792` |
-| Disassembly | ❌ | Pending - use Peony |
+| Disassembly | 🔄 | Available in ffmq-info repo |
 | Metadata | ❌ | Pansy file pending |
 | Graphics | ✅ | 10 tile regions extracted to PNG |
 | Palettes | ✅ | 81 palettes (1544 colors) |
@@ -19,6 +19,17 @@
 | Rebuild | ❌ | Byte-identical pending |
 
 Legend: ✅ Complete | 🔄 In Progress | ❌ Not Started
+
+## 🔗 Disassembly Source
+
+The complete disassembly for FFMQ is maintained in the [ffmq-info](https://github.com/TheAnsarya/ffmq-info) repository:
+
+- **16 bank files** with full documented disassembly
+- **15,000+ lines** in bank_00 alone (core game engine)
+- **SNES register definitions** and symbol tables
+- **DiztinGUIsh integration** with CDL data
+
+See `c:\Users\me\source\repos\ffmq-info\src\asm\` for the source files.
 
 ## 📦 Extracted Data
 
