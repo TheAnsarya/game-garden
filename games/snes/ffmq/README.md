@@ -11,7 +11,7 @@
 |-------|--------|-------|
 | ROM Verified | ✅ | CRC32: `2c52c792` |
 | Disassembly | 🔄 | Available in ffmq-info repo |
-| Metadata | ❌ | Pansy file pending |
+| Metadata | ✅ | Pansy file with 2,928 symbols, 1,797 comments |
 | Graphics | ✅ | 10 tile regions extracted to PNG |
 | Palettes | ✅ | 81 palettes (1544 colors) |
 | Text | ✅ | Table files (simple.tbl, complex.tbl) |
@@ -105,8 +105,12 @@ All text tables in `assets/editable/text/`:
 
 ```
 ffmq/
-├── src/                    # Disassembled source (.pasm) - pending
-├── metadata/               # Pansy metadata files - pending
+├── src/                    # Disassembled source (.pasm) - see ffmq-info
+├── metadata/
+│   ├── ffmq.pansy          # Binary Pansy metadata (392 KB)
+│   ├── ffmq_metadata.json  # Full JSON metadata (1 MB)
+│   ├── ffmq_symbols.txt    # Address=Symbol mappings (93 KB)
+│   └── ffmq_comments.txt   # Extracted comments (419 KB)
 ├── assets/
 │   ├── extracted/          # Raw binary assets (gitignored)
 │   └── editable/
@@ -118,6 +122,30 @@ ffmq/
 └── docs/
     └── rom-map.md          # Comprehensive ROM documentation
 ```
+
+## 🌼 Pansy Metadata
+
+The `metadata/` folder contains extracted symbols and comments from the ffmq-info disassembly:
+
+| File | Size | Contents |
+|------|------|----------|
+| `ffmq.pansy` | 392 KB | Binary Pansy format for Peony/Poppy |
+| `ffmq_metadata.json` | 1 MB | Full JSON (symbols, comments, xrefs) |
+| `ffmq_symbols.txt` | 93 KB | 2,994 address=symbol pairs |
+| `ffmq_comments.txt` | 419 KB | 10,262 lines of documentation |
+
+**Statistics:**
+- 2,928 symbols loaded
+- 1,797 comments preserved
+- 135 cross-references
+
+**Usage with Peony:**
+```powershell
+# Load symbols for enhanced disassembly
+peony disasm rom.sfc -s metadata/ffmq.pansy
+```
+
+**Note:** Source files remain in ffmq-info - this metadata is extracted, not duplicated.
 
 ## 📝 Notes
 
