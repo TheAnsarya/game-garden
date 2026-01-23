@@ -4,6 +4,23 @@
 
 The FFMQ disassembly is maintained in the [ffmq-info](https://github.com/TheAnsarya/ffmq-info) repository. Rather than duplicating this work, game-garden references and integrates with that project.
 
+## ⚠️ IMPORTANT: Preserving Knowledge
+
+**The ffmq-info repository contains extensive documentation and comments that represent significant research effort.** This includes:
+
+- Detailed function descriptions explaining what each routine does
+- Hardware register explanations
+- Data structure documentation
+- Cross-references between routines
+- Game mechanics explanations
+- Boot sequence documentation
+- Memory map annotations
+
+**NEVER delete or overwrite the ffmq-info source files.** The integration strategy is:
+1. **ffmq-info** = Source of truth for documented disassembly
+2. **game-garden** = References ffmq-info, extracts metadata to Pansy format
+3. **Poppy conversion** = When needed, converts *copies* while preserving comments
+
 ## Source Location
 
 ```
