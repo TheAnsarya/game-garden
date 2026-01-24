@@ -1,0 +1,2206 @@
+{
+	"TantagelMobileTable": {
+		"name": "Tantegel Mobile",
+		"offset": "$9764",
+		"count": 10,
+		"npcs": [
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 8,
+				"y": 13,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 98,
+				"raw_bytes": [
+					200,
+					77,
+					98
+				],
+				"offset": "$9764"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 19,
+				"y": 2,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 23,
+				"raw_bytes": [
+					83,
+					66,
+					23
+				],
+				"offset": "$9767"
+			},
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 11,
+				"y": 11,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 28,
+				"raw_bytes": [
+					11,
+					75,
+					28
+				],
+				"offset": "$976A"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 17,
+				"y": 11,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 29,
+				"raw_bytes": [
+					177,
+					75,
+					29
+				],
+				"offset": "$976D"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 4,
+				"y": 21,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 31,
+				"raw_bytes": [
+					100,
+					85,
+					31
+				],
+				"offset": "$9770"
+			},
+			{
+				"sprite_type": 1,
+				"sprite_name": "Fighter",
+				"x": 25,
+				"y": 11,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 22,
+				"raw_bytes": [
+					57,
+					75,
+					22
+				],
+				"offset": "$9773"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 18,
+				"y": 18,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 114,
+				"raw_bytes": [
+					82,
+					82,
+					114
+				],
+				"offset": "$9776"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 2,
+				"y": 12,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 27,
+				"raw_bytes": [
+					66,
+					76,
+					27
+				],
+				"offset": "$9779"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 6,
+				"y": 25,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 32,
+				"raw_bytes": [
+					102,
+					89,
+					32
+				],
+				"offset": "$977C"
+			},
+			{
+				"sprite_type": 1,
+				"sprite_name": "Fighter",
+				"x": 24,
+				"y": 21,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 34,
+				"raw_bytes": [
+					56,
+					85,
+					34
+				],
+				"offset": "$977F"
+			}
+		]
+	},
+	"TantStatTbl": {
+		"name": "Tantegel Static",
+		"offset": "$9783",
+		"count": 10,
+		"npcs": [
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 24,
+				"y": 1,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 14,
+				"raw_bytes": [
+					120,
+					65,
+					14
+				],
+				"offset": "$9783"
+			},
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 27,
+				"y": 5,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 26,
+				"raw_bytes": [
+					219,
+					69,
+					26
+				],
+				"offset": "$9786"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 8,
+				"y": 6,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 25,
+				"raw_bytes": [
+					72,
+					70,
+					25
+				],
+				"offset": "$9789"
+			},
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 2,
+				"y": 8,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 24,
+				"raw_bytes": [
+					2,
+					72,
+					24
+				],
+				"offset": "$978C"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 8,
+				"y": 8,
+				"direction": 0,
+				"direction_name": "Up",
+				"dialog_id": 113,
+				"raw_bytes": [
+					72,
+					8,
+					113
+				],
+				"offset": "$978F"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 26,
+				"y": 15,
+				"direction": 0,
+				"direction_name": "Up",
+				"dialog_id": 30,
+				"raw_bytes": [
+					90,
+					15,
+					30
+				],
+				"offset": "$9792"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 15,
+				"y": 20,
+				"direction": 1,
+				"direction_name": "Right",
+				"dialog_id": 99,
+				"raw_bytes": [
+					79,
+					52,
+					99
+				],
+				"offset": "$9795"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 20,
+				"y": 26,
+				"direction": 3,
+				"direction_name": "Left",
+				"dialog_id": 106,
+				"raw_bytes": [
+					180,
+					122,
+					106
+				],
+				"offset": "$9798"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 9,
+				"y": 27,
+				"direction": 1,
+				"direction_name": "Right",
+				"dialog_id": 33,
+				"raw_bytes": [
+					73,
+					59,
+					33
+				],
+				"offset": "$979B"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 12,
+				"y": 27,
+				"direction": 3,
+				"direction_name": "Left",
+				"dialog_id": 33,
+				"raw_bytes": [
+					76,
+					123,
+					33
+				],
+				"offset": "$979E"
+			}
+		]
+	},
+	"ThRmMobTbl": {
+		"name": "Throne Room Mobile",
+		"offset": "$97A2",
+		"count": 1,
+		"npcs": [
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 7,
+				"y": 5,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 101,
+				"raw_bytes": [
+					71,
+					69,
+					101
+				],
+				"offset": "$97A2"
+			}
+		]
+	},
+	"ThRmStatTbl": {
+		"name": "Throne Room Static",
+		"offset": "$97A6",
+		"count": 4,
+		"npcs": [
+			{
+				"sprite_type": 4,
+				"sprite_name": "King Lorik",
+				"x": 3,
+				"y": 3,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 110,
+				"raw_bytes": [
+					131,
+					67,
+					110
+				],
+				"offset": "$97A6"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 3,
+				"y": 6,
+				"direction": 1,
+				"direction_name": "Right",
+				"dialog_id": 35,
+				"raw_bytes": [
+					67,
+					38,
+					35
+				],
+				"offset": "$97A9"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 5,
+				"y": 6,
+				"direction": 3,
+				"direction_name": "Left",
+				"dialog_id": 36,
+				"raw_bytes": [
+					69,
+					102,
+					36
+				],
+				"offset": "$97AC"
+			},
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 6,
+				"y": 3,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 111,
+				"raw_bytes": [
+					198,
+					67,
+					111
+				],
+				"offset": "$97AF"
+			}
+		]
+	},
+	"TaSLMobTbl": {
+		"name": "Tantegel SL Mobile",
+		"offset": "$97B3",
+		"count": 0,
+		"npcs": []
+	},
+	"TaSLStatTbl": {
+		"name": "Tantegel SL Static",
+		"offset": "$97B4",
+		"count": 1,
+		"npcs": [
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 4,
+				"y": 6,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 102,
+				"raw_bytes": [
+					164,
+					70,
+					102
+				],
+				"offset": "$97B4"
+			}
+		]
+	},
+	"TaDLMobTbl": {
+		"name": "Tantegel DL Mobile",
+		"offset": "$97B8",
+		"count": 7,
+		"npcs": [
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 19,
+				"y": 2,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 23,
+				"raw_bytes": [
+					83,
+					66,
+					23
+				],
+				"offset": "$97B8"
+			},
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 14,
+				"y": 23,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 28,
+				"raw_bytes": [
+					14,
+					87,
+					28
+				],
+				"offset": "$97BB"
+			},
+			{
+				"sprite_type": 1,
+				"sprite_name": "Fighter",
+				"x": 25,
+				"y": 11,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 22,
+				"raw_bytes": [
+					57,
+					75,
+					22
+				],
+				"offset": "$97BE"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 18,
+				"y": 18,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 114,
+				"raw_bytes": [
+					82,
+					82,
+					114
+				],
+				"offset": "$97C1"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 2,
+				"y": 12,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 27,
+				"raw_bytes": [
+					66,
+					76,
+					27
+				],
+				"offset": "$97C4"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 6,
+				"y": 25,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 32,
+				"raw_bytes": [
+					102,
+					89,
+					32
+				],
+				"offset": "$97C7"
+			},
+			{
+				"sprite_type": 1,
+				"sprite_name": "Fighter",
+				"x": 24,
+				"y": 21,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 34,
+				"raw_bytes": [
+					56,
+					85,
+					34
+				],
+				"offset": "$97CA"
+			}
+		]
+	},
+	"TaDLStatTbl": {
+		"name": "Tantegel DL Static",
+		"offset": "$97CE",
+		"count": 9,
+		"npcs": [
+			{
+				"sprite_type": 4,
+				"sprite_name": "King Lorik",
+				"x": 11,
+				"y": 7,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 254,
+				"raw_bytes": [
+					139,
+					71,
+					254
+				],
+				"offset": "$97CE"
+			},
+			{
+				"sprite_type": 7,
+				"sprite_name": "Trumpet Guard",
+				"x": 9,
+				"y": 9,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 253,
+				"raw_bytes": [
+					233,
+					73,
+					253
+				],
+				"offset": "$97D1"
+			},
+			{
+				"sprite_type": 7,
+				"sprite_name": "Trumpet Guard",
+				"x": 9,
+				"y": 11,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 253,
+				"raw_bytes": [
+					233,
+					75,
+					253
+				],
+				"offset": "$97D4"
+			},
+			{
+				"sprite_type": 7,
+				"sprite_name": "Trumpet Guard",
+				"x": 9,
+				"y": 13,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 253,
+				"raw_bytes": [
+					233,
+					77,
+					253
+				],
+				"offset": "$97D7"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 12,
+				"y": 9,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 253,
+				"raw_bytes": [
+					172,
+					73,
+					253
+				],
+				"offset": "$97DA"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 12,
+				"y": 11,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 253,
+				"raw_bytes": [
+					172,
+					75,
+					253
+				],
+				"offset": "$97DD"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 12,
+				"y": 13,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 253,
+				"raw_bytes": [
+					172,
+					77,
+					253
+				],
+				"offset": "$97E0"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 9,
+				"y": 27,
+				"direction": 1,
+				"direction_name": "Right",
+				"dialog_id": 253,
+				"raw_bytes": [
+					73,
+					59,
+					253
+				],
+				"offset": "$97E3"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 12,
+				"y": 27,
+				"direction": 3,
+				"direction_name": "Left",
+				"dialog_id": 253,
+				"raw_bytes": [
+					76,
+					123,
+					253
+				],
+				"offset": "$97E6"
+			}
+		]
+	},
+	"DLBFMobTbl": {
+		"name": "DragonLord BF Mobile",
+		"offset": "$97EA",
+		"count": 0,
+		"npcs": []
+	},
+	"DLBFStatTbl": {
+		"name": "DragonLord BF Static",
+		"offset": "$97EB",
+		"count": 1,
+		"npcs": [
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 16,
+				"y": 24,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 112,
+				"raw_bytes": [
+					176,
+					88,
+					112
+				],
+				"offset": "$97EB"
+			}
+		]
+	},
+	"RainMobTbl": {
+		"name": "Rain Cave Mobile",
+		"offset": "$97EF",
+		"count": 0,
+		"npcs": []
+	},
+	"RainStatTbl": {
+		"name": "Rain Cave Static",
+		"offset": "$97F0",
+		"count": 1,
+		"npcs": [
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 4,
+				"y": 4,
+				"direction": 1,
+				"direction_name": "Right",
+				"dialog_id": 108,
+				"raw_bytes": [
+					164,
+					36,
+					108
+				],
+				"offset": "$97F0"
+			}
+		]
+	},
+	"RnbwMobTbl": {
+		"name": "Rainbow Cave Mobile",
+		"offset": "$97F4",
+		"count": 0,
+		"npcs": []
+	},
+	"RnbwStatTbl": {
+		"name": "Rainbow Cave Static",
+		"offset": "$97F5",
+		"count": 1,
+		"npcs": [
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 4,
+				"y": 5,
+				"direction": 3,
+				"direction_name": "Left",
+				"dialog_id": 109,
+				"raw_bytes": [
+					164,
+					101,
+					109
+				],
+				"offset": "$97F5"
+			}
+		]
+	},
+	"CantMobTbl": {
+		"name": "Cantlin Mobile",
+		"offset": "$97F9",
+		"count": 10,
+		"npcs": [
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 20,
+				"y": 15,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 75,
+				"raw_bytes": [
+					20,
+					79,
+					75
+				],
+				"offset": "$97F9"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 5,
+				"y": 6,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 96,
+				"raw_bytes": [
+					69,
+					70,
+					96
+				],
+				"offset": "$97FC"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 25,
+				"y": 17,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 76,
+				"raw_bytes": [
+					121,
+					81,
+					76
+				],
+				"offset": "$97FF"
+			},
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 4,
+				"y": 14,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 73,
+				"raw_bytes": [
+					196,
+					78,
+					73
+				],
+				"offset": "$9802"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 22,
+				"y": 5,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 3,
+				"raw_bytes": [
+					118,
+					69,
+					3
+				],
+				"offset": "$9805"
+			},
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 9,
+				"y": 16,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 74,
+				"raw_bytes": [
+					201,
+					80,
+					74
+				],
+				"offset": "$9808"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 14,
+				"y": 28,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 107,
+				"raw_bytes": [
+					174,
+					92,
+					107
+				],
+				"offset": "$980B"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 15,
+				"y": 6,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 72,
+				"raw_bytes": [
+					79,
+					70,
+					72
+				],
+				"offset": "$980E"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 3,
+				"y": 26,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 78,
+				"raw_bytes": [
+					99,
+					90,
+					78
+				],
+				"offset": "$9811"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 22,
+				"y": 9,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 77,
+				"raw_bytes": [
+					86,
+					73,
+					77
+				],
+				"offset": "$9814"
+			}
+		]
+	},
+	"CantStatTbl": {
+		"name": "Cantlin Static",
+		"offset": "$9818",
+		"count": 10,
+		"npcs": [
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 8,
+				"y": 3,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 20,
+				"raw_bytes": [
+					104,
+					67,
+					20
+				],
+				"offset": "$9818"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 27,
+				"y": 6,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 12,
+				"raw_bytes": [
+					187,
+					70,
+					12
+				],
+				"offset": "$981B"
+			},
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 2,
+				"y": 7,
+				"direction": 1,
+				"direction_name": "Right",
+				"dialog_id": 10,
+				"raw_bytes": [
+					2,
+					39,
+					10
+				],
+				"offset": "$981E"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 2,
+				"y": 12,
+				"direction": 1,
+				"direction_name": "Right",
+				"dialog_id": 69,
+				"raw_bytes": [
+					98,
+					44,
+					69
+				],
+				"offset": "$9821"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 7,
+				"y": 12,
+				"direction": 3,
+				"direction_name": "Left",
+				"dialog_id": 11,
+				"raw_bytes": [
+					103,
+					108,
+					11
+				],
+				"offset": "$9824"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 24,
+				"y": 12,
+				"direction": 1,
+				"direction_name": "Right",
+				"dialog_id": 5,
+				"raw_bytes": [
+					88,
+					44,
+					5
+				],
+				"offset": "$9827"
+			},
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 22,
+				"y": 13,
+				"direction": 3,
+				"direction_name": "Left",
+				"dialog_id": 16,
+				"raw_bytes": [
+					214,
+					109,
+					16
+				],
+				"offset": "$982A"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 15,
+				"y": 16,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 70,
+				"raw_bytes": [
+					175,
+					80,
+					70
+				],
+				"offset": "$982D"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 22,
+				"y": 22,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 71,
+				"raw_bytes": [
+					182,
+					86,
+					71
+				],
+				"offset": "$9830"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 27,
+				"y": 26,
+				"direction": 3,
+				"direction_name": "Left",
+				"dialog_id": 4,
+				"raw_bytes": [
+					123,
+					122,
+					4
+				],
+				"offset": "$9833"
+			}
+		]
+	},
+	"RimMobTbl": {
+		"name": "Rimuldar Mobile",
+		"offset": "$9837",
+		"count": 10,
+		"npcs": [
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 6,
+				"y": 21,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 89,
+				"raw_bytes": [
+					198,
+					85,
+					89
+				],
+				"offset": "$9837"
+			},
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 11,
+				"y": 8,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 48,
+				"raw_bytes": [
+					11,
+					72,
+					48
+				],
+				"offset": "$983A"
+			},
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 6,
+				"y": 23,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 90,
+				"raw_bytes": [
+					6,
+					87,
+					90
+				],
+				"offset": "$983D"
+			},
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 22,
+				"y": 14,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 86,
+				"raw_bytes": [
+					214,
+					78,
+					86
+				],
+				"offset": "$9840"
+			},
+			{
+				"sprite_type": 1,
+				"sprite_name": "Fighter",
+				"x": 5,
+				"y": 25,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 91,
+				"raw_bytes": [
+					37,
+					89,
+					91
+				],
+				"offset": "$9843"
+			},
+			{
+				"sprite_type": 1,
+				"sprite_name": "Fighter",
+				"x": 23,
+				"y": 11,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 82,
+				"raw_bytes": [
+					55,
+					75,
+					82
+				],
+				"offset": "$9846"
+			},
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 14,
+				"y": 11,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 85,
+				"raw_bytes": [
+					14,
+					75,
+					85
+				],
+				"offset": "$9849"
+			},
+			{
+				"sprite_type": 1,
+				"sprite_name": "Fighter",
+				"x": 16,
+				"y": 26,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 105,
+				"raw_bytes": [
+					48,
+					90,
+					105
+				],
+				"offset": "$984C"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 8,
+				"y": 16,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 84,
+				"raw_bytes": [
+					72,
+					80,
+					84
+				],
+				"offset": "$984F"
+			},
+			{
+				"sprite_type": 1,
+				"sprite_name": "Fighter",
+				"x": 24,
+				"y": 19,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 87,
+				"raw_bytes": [
+					56,
+					83,
+					87
+				],
+				"offset": "$9852"
+			}
+		]
+	},
+	"RimStatTbl": {
+		"name": "Rimuldar Static",
+		"offset": "$9856",
+		"count": 10,
+		"npcs": [
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 27,
+				"y": 0,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 81,
+				"raw_bytes": [
+					27,
+					64,
+					81
+				],
+				"offset": "$9856"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 2,
+				"y": 4,
+				"direction": 0,
+				"direction_name": "Up",
+				"dialog_id": 79,
+				"raw_bytes": [
+					98,
+					4,
+					79
+				],
+				"offset": "$9859"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 4,
+				"y": 7,
+				"direction": 0,
+				"direction_name": "Up",
+				"dialog_id": 13,
+				"raw_bytes": [
+					164,
+					7,
+					13
+				],
+				"offset": "$985C"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 23,
+				"y": 7,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 6,
+				"raw_bytes": [
+					119,
+					71,
+					6
+				],
+				"offset": "$985F"
+			},
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 15,
+				"y": 8,
+				"direction": 0,
+				"direction_name": "Up",
+				"dialog_id": 80,
+				"raw_bytes": [
+					207,
+					8,
+					80
+				],
+				"offset": "$9862"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 6,
+				"y": 13,
+				"direction": 3,
+				"direction_name": "Left",
+				"dialog_id": 83,
+				"raw_bytes": [
+					166,
+					109,
+					83
+				],
+				"offset": "$9865"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 16,
+				"y": 18,
+				"direction": 1,
+				"direction_name": "Right",
+				"dialog_id": 21,
+				"raw_bytes": [
+					112,
+					50,
+					21
+				],
+				"offset": "$9868"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 3,
+				"y": 23,
+				"direction": 1,
+				"direction_name": "Right",
+				"dialog_id": 97,
+				"raw_bytes": [
+					163,
+					55,
+					97
+				],
+				"offset": "$986B"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 20,
+				"y": 23,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 88,
+				"raw_bytes": [
+					180,
+					87,
+					88
+				],
+				"offset": "$986E"
+			},
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 0,
+				"y": 26,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 92,
+				"raw_bytes": [
+					192,
+					90,
+					92
+				],
+				"offset": "$9871"
+			}
+		]
+	},
+	"BrecMobTbl": {
+		"name": "Brecconary Mobile",
+		"offset": "$9875",
+		"count": 10,
+		"npcs": [
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 9,
+				"y": 4,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 43,
+				"raw_bytes": [
+					169,
+					68,
+					43
+				],
+				"offset": "$9875"
+			},
+			{
+				"sprite_type": 1,
+				"sprite_name": "Fighter",
+				"x": 12,
+				"y": 19,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 93,
+				"raw_bytes": [
+					44,
+					83,
+					93
+				],
+				"offset": "$9878"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 15,
+				"y": 9,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 46,
+				"raw_bytes": [
+					111,
+					73,
+					46
+				],
+				"offset": "$987B"
+			},
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 25,
+				"y": 22,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 49,
+				"raw_bytes": [
+					25,
+					86,
+					49
+				],
+				"offset": "$987E"
+			},
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 10,
+				"y": 14,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 44,
+				"raw_bytes": [
+					10,
+					78,
+					44
+				],
+				"offset": "$9881"
+			},
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 24,
+				"y": 4,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 15,
+				"raw_bytes": [
+					216,
+					68,
+					15
+				],
+				"offset": "$9884"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 26,
+				"y": 15,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 47,
+				"raw_bytes": [
+					90,
+					79,
+					47
+				],
+				"offset": "$9887"
+			},
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 15,
+				"y": 24,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 45,
+				"raw_bytes": [
+					207,
+					88,
+					45
+				],
+				"offset": "$988A"
+			},
+			{
+				"sprite_type": 1,
+				"sprite_name": "Fighter",
+				"x": 19,
+				"y": 18,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 48,
+				"raw_bytes": [
+					51,
+					82,
+					48
+				],
+				"offset": "$988D"
+			},
+			{
+				"sprite_type": 1,
+				"sprite_name": "Fighter",
+				"x": 3,
+				"y": 26,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 39,
+				"raw_bytes": [
+					35,
+					90,
+					39
+				],
+				"offset": "$9890"
+			}
+		]
+	},
+	"BrecStatTbl": {
+		"name": "Brecconary Static",
+		"offset": "$9894",
+		"count": 10,
+		"npcs": [
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 5,
+				"y": 4,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 1,
+				"raw_bytes": [
+					101,
+					68,
+					1
+				],
+				"offset": "$9894"
+			},
+			{
+				"sprite_type": 1,
+				"sprite_name": "Fighter",
+				"x": 28,
+				"y": 1,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 37,
+				"raw_bytes": [
+					60,
+					65,
+					37
+				],
+				"offset": "$9897"
+			},
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 4,
+				"y": 7,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 41,
+				"raw_bytes": [
+					196,
+					71,
+					41
+				],
+				"offset": "$989A"
+			},
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 20,
+				"y": 10,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 38,
+				"raw_bytes": [
+					20,
+					74,
+					38
+				],
+				"offset": "$989D"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 24,
+				"y": 10,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 103,
+				"raw_bytes": [
+					184,
+					74,
+					103
+				],
+				"offset": "$98A0"
+			},
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 1,
+				"y": 13,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 42,
+				"raw_bytes": [
+					1,
+					77,
+					42
+				],
+				"offset": "$98A3"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 10,
+				"y": 21,
+				"direction": 3,
+				"direction_name": "Left",
+				"dialog_id": 18,
+				"raw_bytes": [
+					106,
+					117,
+					18
+				],
+				"offset": "$98A6"
+			},
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 20,
+				"y": 23,
+				"direction": 0,
+				"direction_name": "Up",
+				"dialog_id": 40,
+				"raw_bytes": [
+					20,
+					23,
+					40
+				],
+				"offset": "$98A9"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 25,
+				"y": 25,
+				"direction": 3,
+				"direction_name": "Left",
+				"dialog_id": 8,
+				"raw_bytes": [
+					121,
+					121,
+					8
+				],
+				"offset": "$98AC"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 10,
+				"y": 26,
+				"direction": 0,
+				"direction_name": "Up",
+				"dialog_id": 100,
+				"raw_bytes": [
+					74,
+					26,
+					100
+				],
+				"offset": "$98AF"
+			}
+		]
+	},
+	"KolMobTbl": {
+		"name": "Kol Mobile",
+		"offset": "$98B3",
+		"count": 9,
+		"npcs": [
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 14,
+				"y": 13,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 54,
+				"raw_bytes": [
+					14,
+					77,
+					54
+				],
+				"offset": "$98B3"
+			},
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 5,
+				"y": 12,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 48,
+				"raw_bytes": [
+					5,
+					76,
+					48
+				],
+				"offset": "$98B6"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 12,
+				"y": 10,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 55,
+				"raw_bytes": [
+					76,
+					74,
+					55
+				],
+				"offset": "$98B9"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 2,
+				"y": 12,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 94,
+				"raw_bytes": [
+					162,
+					76,
+					94
+				],
+				"offset": "$98BC"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 20,
+				"y": 19,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 56,
+				"raw_bytes": [
+					180,
+					83,
+					56
+				],
+				"offset": "$98BF"
+			},
+			{
+				"sprite_type": 1,
+				"sprite_name": "Fighter",
+				"x": 6,
+				"y": 7,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 53,
+				"raw_bytes": [
+					38,
+					71,
+					53
+				],
+				"offset": "$98C2"
+			},
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 11,
+				"y": 14,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 46,
+				"raw_bytes": [
+					203,
+					78,
+					46
+				],
+				"offset": "$98C5"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 7,
+				"y": 19,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 95,
+				"raw_bytes": [
+					103,
+					83,
+					95
+				],
+				"offset": "$98C8"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 20,
+				"y": 8,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 57,
+				"raw_bytes": [
+					180,
+					72,
+					57
+				],
+				"offset": "$98CB"
+			}
+		]
+	},
+	"KolStatTbl": {
+		"name": "Kol Static",
+		"offset": "$98CF",
+		"count": 7,
+		"npcs": [
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 1,
+				"y": 1,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 104,
+				"raw_bytes": [
+					161,
+					65,
+					104
+				],
+				"offset": "$98CF"
+			},
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 12,
+				"y": 1,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 50,
+				"raw_bytes": [
+					204,
+					65,
+					50
+				],
+				"offset": "$98D2"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 19,
+				"y": 4,
+				"direction": 0,
+				"direction_name": "Up",
+				"dialog_id": 17,
+				"raw_bytes": [
+					115,
+					4,
+					17
+				],
+				"offset": "$98D5"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 22,
+				"y": 12,
+				"direction": 3,
+				"direction_name": "Left",
+				"dialog_id": 0,
+				"raw_bytes": [
+					118,
+					108,
+					0
+				],
+				"offset": "$98D8"
+			},
+			{
+				"sprite_type": 1,
+				"sprite_name": "Fighter",
+				"x": 20,
+				"y": 13,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 51,
+				"raw_bytes": [
+					52,
+					77,
+					51
+				],
+				"offset": "$98DB"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 14,
+				"y": 21,
+				"direction": 3,
+				"direction_name": "Left",
+				"dialog_id": 7,
+				"raw_bytes": [
+					110,
+					117,
+					7
+				],
+				"offset": "$98DE"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 1,
+				"y": 23,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 52,
+				"raw_bytes": [
+					65,
+					87,
+					52
+				],
+				"offset": "$98E1"
+			}
+		]
+	},
+	"GarMobTbl": {
+		"name": "Garinham Mobile",
+		"offset": "$98E5",
+		"count": 7,
+		"npcs": [
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 12,
+				"y": 4,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 62,
+				"raw_bytes": [
+					204,
+					68,
+					62
+				],
+				"offset": "$98E5"
+			},
+			{
+				"sprite_type": 6,
+				"sprite_name": "Female Villager",
+				"x": 12,
+				"y": 12,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 67,
+				"raw_bytes": [
+					204,
+					76,
+					67
+				],
+				"offset": "$98E8"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 12,
+				"y": 8,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 63,
+				"raw_bytes": [
+					172,
+					72,
+					63
+				],
+				"offset": "$98EB"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 2,
+				"y": 10,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 66,
+				"raw_bytes": [
+					162,
+					74,
+					66
+				],
+				"offset": "$98EE"
+			},
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 11,
+				"y": 7,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 61,
+				"raw_bytes": [
+					11,
+					71,
+					61
+				],
+				"offset": "$98F1"
+			},
+			{
+				"sprite_type": 0,
+				"sprite_name": "Male Villager",
+				"x": 18,
+				"y": 12,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 68,
+				"raw_bytes": [
+					18,
+					76,
+					68
+				],
+				"offset": "$98F4"
+			},
+			{
+				"sprite_type": 1,
+				"sprite_name": "Fighter",
+				"x": 7,
+				"y": 17,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 65,
+				"raw_bytes": [
+					39,
+					81,
+					65
+				],
+				"offset": "$98F7"
+			}
+		]
+	},
+	"GarStatTbl": {
+		"name": "Garinham Static",
+		"offset": "$98FB",
+		"count": 8,
+		"npcs": [
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 14,
+				"y": 1,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 58,
+				"raw_bytes": [
+					174,
+					65,
+					58
+				],
+				"offset": "$98FB"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 3,
+				"y": 5,
+				"direction": 1,
+				"direction_name": "Right",
+				"dialog_id": 59,
+				"raw_bytes": [
+					67,
+					37,
+					59
+				],
+				"offset": "$98FE"
+			},
+			{
+				"sprite_type": 2,
+				"sprite_name": "Guard",
+				"x": 5,
+				"y": 5,
+				"direction": 3,
+				"direction_name": "Left",
+				"dialog_id": 59,
+				"raw_bytes": [
+					69,
+					101,
+					59
+				],
+				"offset": "$9901"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 9,
+				"y": 6,
+				"direction": 2,
+				"direction_name": "Down",
+				"dialog_id": 60,
+				"raw_bytes": [
+					105,
+					70,
+					60
+				],
+				"offset": "$9904"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 5,
+				"y": 11,
+				"direction": 3,
+				"direction_name": "Left",
+				"dialog_id": 9,
+				"raw_bytes": [
+					101,
+					107,
+					9
+				],
+				"offset": "$9907"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 17,
+				"y": 15,
+				"direction": 3,
+				"direction_name": "Left",
+				"dialog_id": 19,
+				"raw_bytes": [
+					113,
+					111,
+					19
+				],
+				"offset": "$990A"
+			},
+			{
+				"sprite_type": 5,
+				"sprite_name": "Wizard",
+				"x": 2,
+				"y": 17,
+				"direction": 1,
+				"direction_name": "Right",
+				"dialog_id": 64,
+				"raw_bytes": [
+					162,
+					49,
+					64
+				],
+				"offset": "$990D"
+			},
+			{
+				"sprite_type": 3,
+				"sprite_name": "Shopkeeper",
+				"x": 10,
+				"y": 18,
+				"direction": 0,
+				"direction_name": "Up",
+				"dialog_id": 2,
+				"raw_bytes": [
+					106,
+					18,
+					2
+				],
+				"offset": "$9910"
+			}
+		]
+	}
+}
