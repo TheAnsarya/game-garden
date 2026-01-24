@@ -41,12 +41,9 @@ The current toolchain has issues preventing automatic rebuilds:
    - Need merge functionality to combine both
 
 ### Workaround
-Use the existing **ffmq-info ASAR-based build system** which already produces byte-identical ROMs:
-```powershell
-cd c:\Users\me\source\repos\ffmq-info
-.\build.ps1
-.\test-roundtrip.ps1  # Verifies byte-identical
-```
+The ffmq-info repository has a legacy ASAR-based build that works, but **game-garden uses Poppy exclusively**. The Peony issues above must be fixed to enable the Poppy pipeline.
+
+> **Policy:** All game-garden builds use 🌸 Poppy. Legacy assemblers (ASAR, ca65, xkas) are not used in mainline pipelines.
 
 ## 🔗 Disassembly Source
 

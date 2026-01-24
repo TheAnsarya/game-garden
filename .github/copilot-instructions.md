@@ -18,6 +18,15 @@ ROM → 🌺 Peony (disassemble) → Source + 🌼 Pansy (metadata) → Edit →
 | Pansy | 🌼 | Metadata Format - Symbols, comments, cross-refs |
 | Poppy | 🌸 | Assembler - Source → ROM |
 
+### ⚠️ Poppy-Only Policy
+
+**All game-garden builds use 🌸 Poppy exclusively.** Legacy assemblers (ASAR, ca65, xkas, RGBDS) are **NOT** used in mainline pipelines.
+
+- **Source files:** Use `.pasm` extension (Poppy Assembly)
+- **Build scripts:** Call `poppy` compiler, never legacy tools
+- **Converters:** Edge utilities exist to convert FROM legacy formats TO Poppy (see Poppy repo `tools/converters/`)
+- **Legacy projects:** May reference ASAR/ca65 in documentation but game-garden pipelines use Poppy
+
 ## 📁 Repository Structure
 
 ```
@@ -194,6 +203,8 @@ ROMs are stored in `C:\~reference-roms\` organized by system:
 4. **Never modify** the manual prompts log file
 5. **Always verify checksums** before disassembly
 6. **Always verify byte-identical** after rebuild
+7. **Always use Poppy** - Never ASAR, ca65, xkas, or other legacy assemblers in pipelines
+8. **Always use .pasm extension** - Poppy Assembly format, not .asm
 
 ## 🎮 Target Systems
 
