@@ -17,9 +17,36 @@
 | Palettes | ✅ | 81 palettes (1544 colors) |
 | Text | ✅ | Table files (simple.tbl, complex.tbl) |
 | Data | ✅ | Enemies, attacks, spells, maps, NPCs |
-| Rebuild | ❌ | Byte-identical pending |
+| Rebuild | ❌ | Blocked - see [Known Issues](#-known-issues) |
 
 Legend: ✅ Complete | 🔄 In Progress | ❌ Not Started
+
+## ⚠️ Known Issues
+
+### Peony → Poppy Roundtrip Blocked
+The current toolchain has issues preventing automatic rebuilds:
+
+1. **Unknown Opcodes** ([peony#41](https://github.com/TheAnsarya/peony/issues/41))
+   - Peony outputs `???` for bytes that aren't valid opcodes (e.g., 0xFF)
+   - Poppy parser fails: "Unexpected character: '?'"
+   - Root cause: Data regions incorrectly decoded as code
+
+2. **CDL Not Used in Export** ([peony#42](https://github.com/TheAnsarya/peony/issues/42))
+   - `peony export --format pansy` doesn't support `--cdl` option
+   - Results in 0 code/data offsets in exported Pansy files
+
+3. **No Pansy Merge** ([pansy#16](https://github.com/TheAnsarya/pansy/issues/16))
+   - Existing ffmq.pansy has symbols but no code/data map
+   - CDL has code/data map but no symbols
+   - Need merge functionality to combine both
+
+### Workaround
+Use the existing **ffmq-info ASAR-based build system** which already produces byte-identical ROMs:
+```powershell
+cd c:\Users\me\source\repos\ffmq-info
+.\build.ps1
+.\test-roundtrip.ps1  # Verifies byte-identical
+```
 
 ## 🔗 Disassembly Source
 
