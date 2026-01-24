@@ -1,13 +1,12 @@
 {
 	"rom": {
 		"name": "Dragon Warrior",
-		"filename": "Dragon Warrior (U) (PRG0) [!].nes",
+		"filename": "Dragon Warrior (U) (PRG1) [!].nes",
 		"size": 81936,
-		"crc32": "caaf5c6b"
+		"crc32": "d4d5f5d7"
 	},
 	"hashes": {
-		"crc32": "caaf5c6b"
+		"crc32": "d4d5f5d7"
 	},
-	"cdlFile": "C:\\~reference-roms\\cdls\\Dragon Warrior (U) (PRG1) [!].cdl",
-	"cdlNote": "CDL is for PRG1 revision - nearly identical to PRG0"
+	"cdlFile": "C:\\~reference-roms\\cdls\\Dragon Warrior (U) (PRG1) [!].cdl"
 }

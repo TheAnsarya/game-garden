@@ -1,5 +1,5 @@
 ; 🌺 Peony Disassembly
-; ROM: test-dw1.nes
+; ROM: test-dw1-prg1.nes
 ; Platform: NES
 ; Size: 81936 bytes
 

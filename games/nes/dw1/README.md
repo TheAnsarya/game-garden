@@ -1,7 +1,7 @@
 # Dragon Warrior
 
 **Platform:** NES (6502)
-**ROM:** Dragon Warrior (U) (PRG0) [!].nes
+**ROM:** Dragon Warrior (U) (PRG1) [!].nes
 **Size:** 80 KB
 **Status:** 🟡 In Progress
 
@@ -9,7 +9,7 @@
 
 | Phase | Status | Notes |
 |-------|--------|-------|
-| ROM Verified | ✅ | CRC32: `caaf5c6b` |
+| ROM Verified | ✅ | CRC32: `d4d5f5d7` |
 | Disassembly | ✅ | 364 blocks via Peony + CDL |
 | Metadata | ✅ | Pansy file with 1,406 symbols, 526 comments |
 | CDL Coverage | ✅ | 8.0% (5.5K code, 1K data, 66 subroutines) |
@@ -18,8 +18,6 @@
 | Text | ❌ | Not yet extracted |
 | Data | ✅ | 20 JSON files (monsters, spells, etc.) |
 | Rebuild | ❌ | Byte-identical pending |
-
-**Note:** CDL file is for PRG1 revision; ROM is PRG0. Minor code differences possible.
 
 Legend: ✅ Complete | 🔄 In Progress | ❌ Not Started
 
