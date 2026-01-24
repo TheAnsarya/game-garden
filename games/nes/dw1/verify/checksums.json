@@ -1,0 +1,11 @@
+{
+	"rom": {
+		"name": "Dragon Warrior",
+		"filename": "Dragon Warrior (U) (PRG0) [!].nes",
+		"size": 81936,
+		"crc32": "caaf5c6b"
+	},
+	"hashes": {
+		"crc32": "caaf5c6b"
+	}
+}
