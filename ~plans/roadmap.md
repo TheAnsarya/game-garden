@@ -18,7 +18,7 @@
 - [ ] **BLOCKED:** Rebuild byte-identical via Poppy
   - See [peony#41](https://github.com/TheAnsarya/peony/issues/41) - Unknown opcodes
   - See [peony#42](https://github.com/TheAnsarya/peony/issues/42) - CDL export
-  - **Note:** Legacy ffmq-info uses ASAR (not mainline)
+  - See [ffmq-info#91](https://github.com/TheAnsarya/ffmq-info/issues/91) - Migrate ffmq-info to Poppy
 
 ### Dragon Warrior (NES)
 - [x] Disassembly via Peony + CDL (364 blocks, PRG1)
