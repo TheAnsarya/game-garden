@@ -366,11 +366,17 @@ def main():
         default='*.asm',
         help='File pattern to match (default: *.asm)'
     )
+    parser.add_argument(
+        '--name', '-n',
+        default='game',
+        help='Output file prefix (default: game)'
+    )
 
     args = parser.parse_args()
 
     input_dir = Path(args.input)
     output_dir = Path(args.output)
+    name_prefix = args.name
 
     if not input_dir.exists():
         print(f"Error: Input directory not found: {input_dir}")
@@ -381,6 +387,7 @@ def main():
     print(f"🌱 ASM to Pansy Metadata Extractor")
     print(f"  Input:  {input_dir}")
     print(f"  Output: {output_dir}")
+    print(f"  Prefix: {name_prefix}")
     print()
 
     extractor = AsmMetadataExtractor()
@@ -390,13 +397,13 @@ def main():
     print("Writing metadata files...")
 
     # Write JSON metadata
-    extractor.write_pansy_json(output_dir / 'ffmq_metadata.json')
+    extractor.write_pansy_json(output_dir / f'{name_prefix}_metadata.json')
 
     # Write simple symbol list
-    extractor.write_symbols_txt(output_dir / 'ffmq_symbols.txt')
+    extractor.write_symbols_txt(output_dir / f'{name_prefix}_symbols.txt')
 
     # Write preserved comments
-    extractor.write_comments_txt(output_dir / 'ffmq_comments.txt')
+    extractor.write_comments_txt(output_dir / f'{name_prefix}_comments.txt')
 
     # Print statistics
     stats = extractor.to_json()['statistics']
@@ -408,7 +415,6 @@ def main():
     print(f"  Cross-refs:   {stats['total_cross_refs']}")
     print()
     print("✅ Extraction complete!")
-    print("   Original ffmq-info source files are UNCHANGED.")
 
 
 if __name__ == '__main__':

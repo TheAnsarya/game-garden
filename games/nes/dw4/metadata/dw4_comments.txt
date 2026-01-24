@@ -1,0 +1,399 @@
+; Comments extracted from ffmq-info
+; This preserves all the research and documentation
+
+; === $000000 - battle_entry ===
+; battle_entry
+
+; === $00000e - read_tactics ===
+; read_tactics
+
+; === $000022 - mul16 ===
+; mul16
+
+; === $000024 - btl_entry ===
+; $8038
+
+; === $000028 - RESET_entry ===
+; RESET HANDLER ($FFD8)
+
+; === $000034 - div16 ===
+; div16
+
+; === $000034 - btl_setup ===
+; Battle setup
+; $804A
+
+; === $00003c - init_vars ===
+; Initialize battle vars
+; $8051
+
+; === $000046 - mult_by_a ===
+; mult_by_a
+
+; === $000048 - dispatch ===
+; $805B
+
+; === $00004a - main_init ===
+; MAIN INIT ($C03D)
+
+; === $000060 - act_nop ===
+; Action 0 - NOP
+; $8074
+
+; === $000064 - mode4_jmp ===
+; Mode 4 jump
+; $8075
+
+; === $000068 - act_table ===
+; Action jump table
+; $8078
+
+; === $000074 - rd_tactics ===
+; $8088
+
+; === $00007e - div_16_loop ===
+; div_16_loop
+
+; === $00008e - chk_char ===
+; Check character state
+; $80A1
+
+; === $0000ac - div_24_loop ===
+; div_24_loop
+
+; === $0000b0 - text_char_processor ===
+; SECTION 2: CHARACTER PROCESSOR ($8AA5-$8B10)
+; Main entry point for text character rendering
+
+; === $0000e6 - clr_btl ===
+; $80FA
+
+; === $0000ea - sum_party_stats ===
+; sum_party_stats
+
+; === $000157 - mul16 ===
+; Multiply by 16
+; $8176
+
+; === $00016b - div16 ===
+; Divide by 16
+; $8187
+
+; === $00017f - scale_stat ===
+; Scale stat value
+; $8198
+
+; === $00018d - shift_ext ===
+; $81A5
+
+; === $000192 - text_read_loop ===
+; SECTION 4: TEXT READ LOOP ($95AF-$9650)
+; Reads text from ($EE),Y pointer
+
+; === $0001a0 - damage_calc ===
+; damage_calc
+
+; === $0001dc - NMI_main ===
+; NMI HANDLER ($C15A)
+
+; === $0002ff - mult_a ===
+; Multiply by A
+; $8330
+
+; === $000339 - mult_pair ===
+; Multiply pair
+; $8366
+
+; === $000365 - IRQ_handler ===
+; IRQ HANDLER ($C408)
+
+; === $000381 - add_pairs ===
+; Add 16-bit pairs
+; $83AA
+
+; === $000399 - div16_lp ===
+; $83C5
+
+; === $0003c9 - div24_set ===
+; 24-bit div setup
+; $83F4
+
+; === $0003e5 - div24_lp ===
+; $8414
+
+; === $000425 - div_3byte ===
+; 3-byte division
+; $8454
+
+; === $00042b - btl_calc ===
+; Battle calculation
+; $845A
+
+; === $000453 - helper_8488 ===
+; Unknown helper
+; $8488
+
+; === $00099f - get_act ===
+; Get action data
+; $89B6
+
+; === $000d5b - setup_ptr ===
+; Setup char pointer
+; $8D77
+
+; === $0010b1 - finalize ===
+; $9110
+
+; === $0010d2 - chk_hit ===
+; Check hit/miss
+; $9135
+
+; === $001136 - hit_6 ===
+; Hit check type 6
+; $919A
+
+; === $00113e - clr_dmg ===
+; Clear damage vars
+; $91A0
+
+; === $001148 - act_codes ===
+; Action code table
+; $91A9
+
+; === $00118e - get_ene_idx ===
+; Get enemy index
+; $9201
+
+; === $0011a0 - sum_stats ===
+; Sum party stats
+; $9212
+
+; === $0011ac - party_lp ===
+; $921C
+
+; === $0011ea - add_stat ===
+; Add stat pair
+; $925F
+
+; === $001206 - stat_lookup ===
+; Stat table lookup
+; $9276
+
+; === $001310 - get_tact_1 ===
+; Get tactics spell 1
+; $9365
+
+; === $001328 - get_tact_2 ===
+; Get tactics spell 2
+; $937A
+
+; === $00133c - calc_tact ===
+; Calc tactics index
+; $938B
+
+; === $001350 - get_tact_3 ===
+; Get tactics spell 3
+; $939A
+
+; === $001537 - setup_act ===
+; Setup action
+; $9584
+
+; === $00240a - exec_step ===
+; Execute action step
+; $A54D
+
+; === $00244a - valid_act ===
+; Validate action
+; $A58D
+
+; === $00246a - find_tgt ===
+; Find valid target
+; $A5AA
+
+; === $0024c0 - chk_exec ===
+; Check if can execute
+; $A5FC
+
+; === $0024e0 - calc_off ===
+; Calculate offset
+; $A61A
+
+; === $0024f0 - act_ptr_tbl ===
+; Action pointer table
+; $A624
+
+; === $00255e - st_setup1 ===
+; $A6C6
+
+; === $002564 - st_setup2 ===
+; $A6CA
+
+; === $00256a - st_setup3 ===
+; $A6CE
+
+; === $002570 - st_clean ===
+; $A6D2
+
+; === $0028e2 - store_act ===
+; Store action type
+; $AA54
+
+; === $0028f4 - dmg_calc ===
+; Damage calculation
+; $AA67
+
+; === $00292c - apply_def ===
+; $AA9F
+
+; === $0029e4 - chk_resist ===
+; Check resistance
+; $AB59
+
+; === $002ced - get_sp_pwr ===
+; Get spell power
+; $AEA6
+
+; === $002cf5 - shift_8c ===
+; Shift $8C:$8B
+; $AEAF
+
+; === $002cfd - get_sp_atr ===
+; Get spell attribute
+; $AEB4
+
+; === $002d09 - cap_sp_idx ===
+; Cap spell index
+; $AEC0
+
+; === $002d55 - atk_handler ===
+; Attack handler
+; $AF10
+
+; === $002d87 - spell_hand ===
+; Spell handler
+; $AF48
+
+; === $002dc5 - item_hand ===
+; Item handler
+; $AF97
+
+; === $002e0b - act_ff0 ===
+; Handler at AFF0
+; $AFF0
+
+; === $002e51 - def_hand ===
+; Defense handler
+; $B049
+
+; === $002e67 - chk_ch4 ===
+; Check chapter 4
+; $B066
+
+; === $002e91 - chk_party ===
+; Check party status
+; $B08C
+
+; === $002eb9 - bit_rot ===
+; Bit rotation
+; $B0B4
+
+; === $002eef - spec_enemy ===
+; $B0E0
+
+; === $002f3b - find_char ===
+; Find valid character
+; $B132
+
+; === $00349d - stat_tbl_1 ===
+; $B74D
+
+; === $003525 - spell_eff_tbl ===
+; $B80B
+
+; === $003559 - spell_p1_tbl ===
+; Spell param 1 table
+; $B915
+
+; === $003599 - spell_p2_tbl ===
+; Spell param 2 table
+; $B949
+
+; === $0035bd - enemy_res_tbl ===
+; Enemy resistance table
+; $B967
+
+; === $0035eb - ai_tbl_2 ===
+; $BA6C
+
+; === $0035f1 - ai_tbl_3 ===
+; AI table 3
+; $BA70
+
+; === $0035f7 - tact_sp_1 ===
+; Tactics spell data 1
+; $BA74
+
+; === $00363d - tact_sp_2 ===
+; $BAA5
+
+; === $00366d - tact_sp_3 ===
+; $BAD5
+
+; === $0036a5 - sp_bonus ===
+; $BB22
+
+; === $0036bf - sp_power ===
+; $BB3F
+
+; === $0036cd - sp_attr ===
+; $BB49
+
+; === $003703 - atk_mult ===
+; $BB84
+
+; === $003715 - hit_thresh ===
+; $BB92
+
+; === $00371d - base_dmg ===
+; $BB99
+
+; === $0081db - handle_max_level ===
+; HANDLE MAX LEVEL CHARACTER
+; Bank 8 $81c6
+; When character is at max level, load stats from a fixed table instead
+
+; === $0081fd - special_growth_0e ===
+; SPECIAL GROWTH TYPE $0e
+; Bank 8 $81e8
+; Alternative growth calculation for variant characters (level index = $0e)
+
+; === $008225 - data_special_ptr ===
+; Special pointer for max level handling
+
+; === $008225 - data_special_2 ===
+; Another special pointer
+
+; === $008225 - data_base_params ===
+; Base parameter table (6 entries, 2 bytes each)
+; Indexed by: (char_id * 2 + gender) * 2
+
+; === $008225 - data_global_base ===
+; Global base value
+
+; === $008225 - data_growth_ptr_lo ===
+; Growth data pointer table (indexed by char_id)
+; Low bytes at $8237, high bytes at $8238+
+
+; === $00c813 - add_16bit_impl ===
+; add_16bit: Add A to 16-bit value at [$00+X:$01+X]
+; clc is implied
+
+; === $00c821 - add_extended_impl ===
+; add_extended: Add YA to 16-bit value at [$00+X:$01+X]
+; A = low byte, Y = high byte
+
+; === $00c82d - multiply_impl ===
+; multiply_8x16: Multiply A (8-bit) by 16-bit value at [$00+X:$01+X]
+; Standard shift-and-add algorithm
+

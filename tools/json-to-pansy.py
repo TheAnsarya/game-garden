@@ -346,6 +346,12 @@ def main():
         action='store_true',
         help='Enable DEFLATE compression'
     )
+    parser.add_argument(
+        '--platform',
+        default='snes',
+        choices=['nes', 'snes', 'gb', 'gba', 'genesis'],
+        help='Target platform (default: snes)'
+    )
 
     args = parser.parse_args()
 
@@ -366,6 +372,16 @@ def main():
     writer.author = args.author
     writer.rom_size = args.rom_size
     writer.enable_compression = args.compress
+
+    # Set platform
+    platform_map = {
+        'nes': PLATFORM_NES,
+        'snes': PLATFORM_SNES,
+        'gb': PLATFORM_GB,
+        'gba': PLATFORM_GBA,
+        'genesis': PLATFORM_GENESIS,
+    }
+    writer.platform = platform_map.get(args.platform.lower(), PLATFORM_SNES)
 
     if args.rom_crc32:
         crc = args.rom_crc32.strip()
