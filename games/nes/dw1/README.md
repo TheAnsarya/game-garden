@@ -10,19 +10,27 @@
 | Phase | Status | Notes |
 |-------|--------|-------|
 | ROM Verified | ✅ | CRC32: `caaf5c6b` |
-| Disassembly | 🔄 | Available in dragon-warrior-info repo |
+| Disassembly | ✅ | 364 blocks via Peony + CDL |
 | Metadata | ✅ | Pansy file with 1,406 symbols, 526 comments |
-| Graphics | ❌ | Not yet extracted |
+| CDL Coverage | ✅ | 8.0% (5.5K code, 1K data, 66 subroutines) |
+| Graphics | ✅ | 144 PNG files extracted |
 | Palettes | ❌ | Not yet extracted |
 | Text | ❌ | Not yet extracted |
-| Data | ❌ | Not yet extracted |
+| Data | ✅ | 20 JSON files (monsters, spells, etc.) |
 | Rebuild | ❌ | Byte-identical pending |
+
+**Note:** CDL file is for PRG1 revision; ROM is PRG0. Minor code differences possible.
 
 Legend: ✅ Complete | 🔄 In Progress | ❌ Not Started
 
 ## 🔗 Disassembly Source
 
-The complete disassembly for Dragon Warrior is maintained in the [dragon-warrior-info](https://github.com/TheAnsarya/dragon-warrior-info) repository:
+### Local Source (`src/`)
+- `main.pasm` - Peony disassembly with 364 blocks
+- Generated using CDL file with 69 entry points
+
+### Full Disassembly
+The complete disassembly is in [dragon-warrior-info](https://github.com/TheAnsarya/dragon-warrior-info):
 
 - **4 bank files** with full documented disassembly (Bank00-Bank03)
 - **2,139 labels** extracted from disassembly

@@ -10,19 +10,25 @@
 | Phase | Status | Notes |
 |-------|--------|-------|
 | ROM Verified | ✅ | CRC32: `f6b24806` |
-| Disassembly | 🔄 | Available in dragon-warrior-4-info repo |
+| Disassembly | ✅ | 770 blocks via Peony + CDL |
 | Metadata | ✅ | Pansy file with 10,924 symbols, 30,019 xrefs |
+| CDL Coverage | ✅ | 6.2% (24K code, 8K data, 570 subroutines) |
 | Graphics | ❌ | Not yet extracted |
 | Palettes | ❌ | Not yet extracted |
 | Text | ❌ | Not yet extracted |
-| Data | ❌ | Not yet extracted |
+| Data | 🔄 | 8 JSON files in dragon-warrior-4-info |
 | Rebuild | ❌ | Byte-identical pending |
 
 Legend: ✅ Complete | 🔄 In Progress | ❌ Not Started
 
 ## 🔗 Disassembly Source
 
-The complete disassembly for Dragon Warrior IV is maintained in the [dragon-warrior-4-info](https://github.com/TheAnsarya/dragon-warrior-4-info) repository:
+### Local Source (`src/`)
+- `main.pasm` - Peony disassembly with 770 blocks
+- Generated using CDL file with 565 entry points
+
+### Full Disassembly
+The complete disassembly is in [dragon-warrior-4-info](https://github.com/TheAnsarya/dragon-warrior-4-info):
 
 - **32 bank files** with full disassembly (bank00-bank31)
 - **38 source files** total including special banks

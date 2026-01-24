@@ -41,19 +41,20 @@
 ## 🎮 Games in the Garden
 
 ### NES Games
-| Game | Status | Disasm | Assets | Rebuild |
-|------|--------|--------|--------|---------|
-| *Coming soon* | | | | |
+| Game | Status | Disasm | Metadata | Assets | Rebuild |
+|------|--------|--------|----------|--------|---------|
+| [Dragon Warrior](games/nes/dw1/) | 🔄 | ✅ 364 blocks | ✅ Pansy | ✅ 144 PNG, 20 JSON | ❌ |
+| [Dragon Warrior IV](games/nes/dw4/) | 🔄 | ✅ 770 blocks | ✅ Pansy | 🔄 8 JSON | ❌ |
 
 ### SNES Games
-| Game | Status | Disasm | Assets | Rebuild |
-|------|--------|--------|--------|---------|
-| [Final Fantasy: Mystic Quest](games/snes/ffmq/) | 🔄 | ❌ | ✅ | ❌ |
+| Game | Status | Disasm | Metadata | Assets | Rebuild |
+|------|--------|--------|----------|--------|---------|
+| [Final Fantasy: Mystic Quest](games/snes/ffmq/) | 🔄 | ✅ 1826 blocks | ✅ Pansy | ✅ Full | ❌ |
 
 ### Game Boy Games
-| Game | Status | Disasm | Assets | Rebuild |
-|------|--------|--------|--------|---------|
-| *Coming soon* | | | | |
+| Game | Status | Disasm | Metadata | Assets | Rebuild |
+|------|--------|--------|----------|--------|---------|
+| *Coming soon* | | | | | |
 
 **Legend:** ✅ Complete | 🔄 In Progress | ❌ Not Started
 

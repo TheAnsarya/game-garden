@@ -10,8 +10,9 @@
 | Phase | Status | Notes |
 |-------|--------|-------|
 | ROM Verified | ✅ | CRC32: `2c52c792` |
-| Disassembly | 🔄 | Available in ffmq-info repo |
+| Disassembly | ✅ | 1826 blocks via Peony + CDL |
 | Metadata | ✅ | Pansy file with 2,928 symbols, 1,797 comments |
+| CDL Coverage | ✅ | 48.7% (60K code, 195K data, 797 subroutines) |
 | Graphics | ✅ | 10 tile regions extracted to PNG |
 | Palettes | ✅ | 81 palettes (1544 colors) |
 | Text | ✅ | Table files (simple.tbl, complex.tbl) |
@@ -22,7 +23,12 @@ Legend: ✅ Complete | 🔄 In Progress | ❌ Not Started
 
 ## 🔗 Disassembly Source
 
-The complete disassembly for FFMQ is maintained in the [ffmq-info](https://github.com/TheAnsarya/ffmq-info) repository:
+### Local Source (`src/`)
+- `main.pasm` - Peony disassembly with 1826 blocks
+- Generated using CDL file with 798 entry points
+
+### Full Disassembly
+The complete documented disassembly is in [ffmq-info](https://github.com/TheAnsarya/ffmq-info):
 
 - **16 bank files** with full documented disassembly
 - **15,000+ lines** in bank_00 alone (core game engine)
