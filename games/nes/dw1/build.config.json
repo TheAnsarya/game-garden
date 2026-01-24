@@ -1,0 +1,37 @@
+{
+	"$schema": "https://game-garden.example.com/schemas/build-config.json",
+	"project": {
+		"name": "Dragon Warrior",
+		"shortName": "dw1",
+		"platform": "nes",
+		"version": "1.0.0"
+	},
+	"rom": {
+		"name": "Dragon Warrior (U) (PRG1) [!].nes",
+		"crc32": "d4d5f5d7",
+		"size": 81936,
+		"mapper": "MMC1"
+	},
+	"source": {
+		"assembler": "poppy",
+		"mainFile": "src/main.pasm",
+		"includes": ["src/", "src/includes/"],
+		"outputRom": "build/dragon-warrior.nes"
+	},
+	"assets": {
+		"extractDir": "assets/extracted",
+		"editableDir": "assets/editable",
+		"binaryDir": "assets/binary",
+		"graphics": {
+			"format": "png",
+			"tileSize": [8, 8]
+		}
+	},
+	"metadata": {
+		"pansyFile": "metadata/dw1.pansy",
+		"cdlFile": "C:\\~reference-roms\\cdls\\Dragon Warrior (U) (PRG1) [!].cdl"
+	},
+	"reference": {
+		"disassemblyRepo": "https://github.com/TheAnsarya/dragon-warrior-info"
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"$schema": "https://game-garden.example.com/schemas/build-config.json",
+	"project": {
+		"name": "Dragon Warrior IV",
+		"shortName": "dw4",
+		"platform": "nes",
+		"version": "1.0.0"
+	},
+	"rom": {
+		"name": "Dragon Warrior IV (1992-10)(Enix)(US).nes",
+		"crc32": "f6b24806",
+		"size": 524304,
+		"mapper": "MMC5"
+	},
+	"source": {
+		"assembler": "poppy",
+		"mainFile": "src/main.pasm",
+		"includes": ["src/", "src/includes/", "src/banks/"],
+		"outputRom": "build/dragon-warrior-4.nes"
+	},
+	"assets": {
+		"extractDir": "assets/extracted",
+		"editableDir": "assets/editable",
+		"binaryDir": "assets/binary",
+		"graphics": {
+			"format": "png",
+			"tileSize": [8, 8]
+		}
+	},
+	"metadata": {
+		"pansyFile": "metadata/dw4.pansy",
+		"cdlFile": "C:\\~reference-roms\\cdls\\Dragon Warrior IV (1992-10)(Enix)(US).cdl"
+	},
+	"reference": {
+		"disassemblyRepo": "https://github.com/TheAnsarya/dragon-warrior-4-info"
+	}
+}
