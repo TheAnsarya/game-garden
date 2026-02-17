@@ -1,0 +1,15 @@
+{
+	"game": "California Games",
+	"platform": "Atari Lynx",
+	"region": "USA, Europe",
+	"rom_file": "California Games (1991).lnx",
+	"size_bytes": 131136,
+	"expected_hashes": {
+		"md5": "35a63e6ff2516c670fa6e72baf57f9ab",
+		"sha1": "ae369a7a3f076de1449097d3b926e3ab4dae242c",
+		"sha256": "daddc150143a09ae792289ab0f1215fe0955f34bdc09fb595e8cf027340e5200"
+	},
+	"source": "GoodLynx v2.01",
+	"verified": true,
+	"notes": "LNX format: 64-byte header + 131072-byte ROM data"
+}
