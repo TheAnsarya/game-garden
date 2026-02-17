@@ -1,0 +1,15 @@
+{
+	"game": "Chip's Challenge",
+	"platform": "Atari Lynx",
+	"region": "USA, Europe",
+	"rom_file": "Chip's Challenge (1989).lnx",
+	"size_bytes": 131136,
+	"expected_hashes": {
+		"md5": "ad3d091ba4250d0354bc6d3fd8c9a882",
+		"sha1": "92af2d566c6bbf626a21dbfa41af16d73e0a774d",
+		"sha256": "5a55f01511e382297f86b073f71f7e1b504762d323a0c7e8ee2bbc1e6633ce45"
+	},
+	"source": "GoodLynx v2.01",
+	"verified": true,
+	"notes": "LNX format: 64-byte header + 131072-byte ROM data. Launch title."
+}
