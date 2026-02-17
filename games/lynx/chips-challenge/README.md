@@ -50,9 +50,9 @@ This game is notable for:
 Initial disassembly shows limited code detection (encrypted boot loader).
 Key challenges:
 
-1. **Boot Loader:** Lynx uses encrypted boot ROM
+1. **Boot Loader:** Lynx boot ROM loads program from cartridge
 2. **Level Data:** 144 levels with tile maps need identification
-3. **Code Coverage:** CDL from emulator tracing required
+3. **Code Coverage:** Manual analysis and Nexen debugging
 
 ### Expected Data Structures
 
@@ -86,12 +86,12 @@ Key challenges:
 
 1. ~~Extract and verify ROM~~ ✅
 2. ~~Run Peony disassembler~~ ✅ (initial pass complete)
-3. Generate CDL file by tracing game in Mednafen
-4. Re-run disassembly with CDL for better code coverage
-5. Identify level data structures
+3. Analyze ROM structure in Nexen debugger
+4. Manually identify code/data boundaries
+5. Add labels and comments in Poppy source
 6. Extract tile graphics
 7. Document game mechanics
-8. Verify byte-identical rebuild
+8. Verify byte-identical rebuild with Poppy
 
 ## References
 
@@ -99,6 +99,7 @@ Key challenges:
 - [Level file format documentation](https://www.seasip.info/ccfile.html)
 - [Atari Lynx Development](https://atarilynxdeveloper.wordpress.com/)
 - [Lynx Programming Manual](https://archive.org/details/AtariLynxProgrammersGuide)
+- [Nexen Emulator](https://github.com/TheAnsarya/Nexen) - For debugging and analysis
 
 ## Related Projects
 

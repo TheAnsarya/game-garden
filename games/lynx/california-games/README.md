@@ -5,7 +5,7 @@
 | Phase | Status | Notes |
 |-------|--------|-------|
 | ROM Verified | ✅ | Checksums verified (GoodLynx 2.01) |
-| Disassembly | 🔄 | Initial pass complete, needs CDL data |
+| Disassembly | 🔄 | Initial pass complete, needs manual analysis |
 | Metadata | ❌ | Not started |
 | Graphics | ❌ | Not started |
 | Text | ❌ | Not started |
@@ -26,18 +26,18 @@
 ## Disassembly Notes
 
 The initial disassembly shows limited code detection because Lynx ROMs
-typically contain encrypted/compressed boot loader data at the load address
-($0200). Key challenges:
+typically contain boot loader data at the load address ($0200). Key challenges:
 
-1. **Boot Loader:** The Lynx uses a boot ROM that decrypts/loads the game
+1. **Boot Loader:** The Lynx boot ROM loads the game from cartridge
 2. **Compressed Data:** Much of the ROM may be compressed graphics/data
-3. **Code Coverage:** A CDL (Code/Data Log) from emulator tracing is needed
+3. **Code Coverage:** Manual analysis with Nexen debugger needed
 
 ### To Improve Disassembly
 
-1. Run game in Mednafen with CDL logging enabled
-2. Generate trace of executed code addresses
-3. Re-run Peony with CDL file: `peony disasm rom.lnx -c trace.cdl`
+1. Load ROM in Nexen and use debugger
+2. Trace execution from entry point
+3. Add labels and comments in Poppy source
+4. Rebuild with Poppy to verify
 
 ## Game Overview
 

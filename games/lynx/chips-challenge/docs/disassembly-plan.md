@@ -16,20 +16,21 @@ extraction and documentation.
 - [x] Create GitHub issue #11
 - [x] Hardware definitions file
 
-## Phase 2: CDL Tracing
+## Phase 2: ROM Analysis with Nexen
 
 **Status:** Not Started
 
-- [ ] Set up Mednafen with CDL logging
-- [ ] Play through several levels to trace code paths
-- [ ] Export CDL file
-- [ ] Re-run Peony with CDL: `peony disasm rom.lnx -c trace.cdl`
-- [ ] Verify improved code coverage
+- [ ] Load ROM in Nexen debugger
+- [ ] Set breakpoints at entry point ($0200)
+- [ ] Trace boot sequence execution
+- [ ] Identify main game loop
+- [ ] Document code entry points
+- [ ] Add labels to Poppy source
 
 **Notes:**
-- Need to play through varied levels to hit different code paths
-- Monster interactions, item pickups, deaths all trace different code
-- Save/load functionality if present
+- Use Nexen's debugger to step through code
+- Identify subroutine boundaries
+- Watch for jumps to high memory addresses
 
 ## Phase 3: Level Data Research
 
@@ -128,9 +129,9 @@ Monster Data:
 
 ### Tools
 
-- **Peony:** Disassembly
-- **Poppy:** Assembly
-- **Mednafen:** CDL tracing
+- **Poppy:** Assembly and rebuild
+- **Peony:** Initial disassembly
+- **Nexen:** Debugging and analysis
 - **game-garden tools:** Asset extraction
 
 ## Timeline Estimate
@@ -146,9 +147,9 @@ Monster Data:
 
 ## Priority Order
 
-1. CDL tracing (enables everything else)
+1. Nexen analysis (understand code structure)
 2. Level data (most interesting part)
 3. Graphics (needed for level editors)
-4. Code (enables modding)
+4. Poppy rebuild (verify correctness)
 5. Audio (nice to have)
-6. Rebuild (final verification)
+6. Full documentation
