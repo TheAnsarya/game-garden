@@ -1,0 +1,37 @@
+{
+	"name": "Example Game",
+	"platform": "nes",
+	"rom": {
+		"path": "C:\\~reference-roms\\nes\\example-game.nes",
+		"crc32": "deadbeef",
+		"hasHeader": false
+	},
+	"pansy": {
+		"inputs": [
+			"metadata/example-game-nexen.pansy",
+			"metadata/example-game-peony.pansy"
+		],
+		"output": "metadata/example-game.pansy",
+		"manual": "metadata/example-game-manual.pansy"
+	},
+	"peony": {
+		"outputDir": "src",
+		"hints": "metadata/example-game-nexen.pansy"
+	},
+	"poppy": {
+		"main": "src/main.pasm",
+		"output": "build/example-game.nes",
+		"pansyOutput": "metadata/example-game-poppy.pansy"
+	},
+	"nexen": {
+		"exportDir": "metadata"
+	},
+	"build": {
+		"dir": "build"
+	},
+	"metadata": {
+		"author": "TheAnsarya",
+		"version": "0.1.0",
+		"description": "Example game disassembly and rebuild"
+	}
+}

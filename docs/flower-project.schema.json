@@ -1,0 +1,157 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://game-garden.dev/flower-project.schema.json",
+	"title": "Flower Project Configuration",
+	"description": "Unified project configuration for the Flower Toolchain (Nexen, Peony, Poppy, Pansy)",
+	"type": "object",
+	"required": ["name", "platform"],
+	"properties": {
+		"name": {
+			"type": "string",
+			"description": "Project display name (e.g., 'Final Fantasy Mystic Quest')"
+		},
+		"platform": {
+			"type": "string",
+			"enum": ["nes", "snes", "gb", "gba", "genesis", "sms", "pce", "atari2600", "lynx", "wonderswan"],
+			"description": "Target platform identifier"
+		},
+		"rom": {
+			"type": "object",
+			"description": "ROM file information",
+			"properties": {
+				"path": {
+					"type": "string",
+					"description": "Path to the original ROM (absolute or relative to project root)"
+				},
+				"crc32": {
+					"type": "string",
+					"pattern": "^[0-9a-f]{8}$",
+					"description": "Expected CRC32 checksum (lowercase hex, 8 chars)"
+				},
+				"md5": {
+					"type": "string",
+					"pattern": "^[0-9a-f]{32}$",
+					"description": "Expected MD5 checksum (lowercase hex, 32 chars)"
+				},
+				"sha256": {
+					"type": "string",
+					"pattern": "^[0-9a-f]{64}$",
+					"description": "Expected SHA256 checksum (lowercase hex, 64 chars)"
+				},
+				"hasHeader": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether the ROM has a copier header to skip"
+				},
+				"headerSize": {
+					"type": "integer",
+					"default": 0,
+					"description": "Size of the copier header in bytes (e.g., 512 for SMC)"
+				}
+			},
+			"required": ["path"]
+		},
+		"pansy": {
+			"type": "object",
+			"description": "Pansy metadata configuration",
+			"properties": {
+				"inputs": {
+					"type": "array",
+					"items": { "type": "string" },
+					"description": "Input .pansy files to merge (ordered: first = base, rest = overlays)"
+				},
+				"output": {
+					"type": "string",
+					"default": "metadata/{name}.pansy",
+					"description": "Path for the merged/authoritative .pansy file"
+				},
+				"manual": {
+					"type": "string",
+					"description": "Path to hand-edited .pansy file (always applied last as overlay)"
+				}
+			}
+		},
+		"peony": {
+			"type": "object",
+			"description": "Peony disassembly configuration",
+			"properties": {
+				"outputDir": {
+					"type": "string",
+					"default": "src",
+					"description": "Directory for generated .pasm files"
+				},
+				"hints": {
+					"type": "string",
+					"description": "Path to .pansy file for disassembly hints"
+				},
+				"options": {
+					"type": "object",
+					"description": "Additional Peony CLI options (key-value pairs)"
+				}
+			}
+		},
+		"poppy": {
+			"type": "object",
+			"description": "Poppy assembly configuration",
+			"properties": {
+				"main": {
+					"type": "string",
+					"default": "src/main.pasm",
+					"description": "Path to the main .pasm source file"
+				},
+				"output": {
+					"type": "string",
+					"description": "Path for the built ROM (default: build/{name}.{ext})"
+				},
+				"pansyOutput": {
+					"type": "string",
+					"description": "Path for the build-generated .pansy file"
+				},
+				"options": {
+					"type": "object",
+					"description": "Additional Poppy CLI options (key-value pairs)"
+				}
+			}
+		},
+		"nexen": {
+			"type": "object",
+			"description": "Nexen emulator export configuration",
+			"properties": {
+				"exportDir": {
+					"type": "string",
+					"default": "metadata",
+					"description": "Directory where Nexen exports .pansy files"
+				}
+			}
+		},
+		"build": {
+			"type": "object",
+			"description": "Build output configuration",
+			"properties": {
+				"dir": {
+					"type": "string",
+					"default": "build",
+					"description": "Build output directory"
+				}
+			}
+		},
+		"metadata": {
+			"type": "object",
+			"description": "Project metadata for Pansy file generation",
+			"properties": {
+				"author": {
+					"type": "string",
+					"description": "Project author name"
+				},
+				"version": {
+					"type": "string",
+					"description": "Project version (semver)"
+				},
+				"description": {
+					"type": "string",
+					"description": "Brief project description"
+				}
+			}
+		}
+	}
+}
