@@ -10,6 +10,7 @@ Welcome to the Game Garden documentation! This guide covers everything you need 
 - [Repository Structure](structure.md) - Understanding the project layout
 
 ### Workflow Guides
+- [🌷 Pipeline Guide](PIPELINE-GUIDE.md) - **Complete Flower Toolchain workflow** (play → debug → disassemble → edit → build → verify)
 - [Adding a New Game](adding-games.md) - Step-by-step game setup
 - [Disassembly Workflow](disassembly.md) - Using Peony for disassembly
 - [Asset Extraction](asset-extraction.md) - Extracting and converting assets
@@ -22,7 +23,8 @@ Welcome to the Game Garden documentation! This guide covers everything you need 
 - [Troubleshooting](troubleshooting.md) - Common issues and solutions
 
 ### The Flower Toolchain
-- [🌺 Peony](https://github.com/TheAnsarya/peony) - Disassembler
+- [� Nexen](https://github.com/TheAnsarya/Nexen) - Emulator & Debugger
+- [�🌺 Peony](https://github.com/TheAnsarya/peony) - Disassembler
 - [🌼 Pansy](https://github.com/TheAnsarya/pansy) - Metadata Format
 - [🌸 Poppy](https://github.com/TheAnsarya/poppy) - Assembler
 
