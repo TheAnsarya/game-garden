@@ -13,6 +13,7 @@ Welcome to the Game Garden documentation! This guide covers everything you need 
 - [🌷 Pipeline Guide](PIPELINE-GUIDE.md) - **Complete Flower Toolchain workflow** (play → debug → disassemble → edit → build → verify)
 - [🌼 Merge Workflow](MERGE-WORKFLOW.md) - Merging Pansy metadata from multiple sources
 - [🌸 Project Config](flower-project.schema.json) - Unified `flower-project.json` schema ([example](flower-project.example.json))
+- [🔧 Version Compatibility](VERSION-COMPATIBILITY.md) - Cross-project version matrix and validation rules
 - [Adding a New Game](adding-games.md) - Step-by-step game setup
 - [Disassembly Workflow](disassembly.md) - Using Peony for disassembly
 - [Asset Extraction](asset-extraction.md) - Extracting and converting assets
