@@ -34,6 +34,7 @@
 
 | Tool | Emoji | Purpose | Direction |
 |------|-------|---------|-----------|
+| [Nexen](https://github.com/TheAnsarya/Nexen) | 🎮 | Emulator & Debugger | Play & Export |
 | [Peony](https://github.com/TheAnsarya/peony) | 🌺 | Disassembler | ROM → Source |
 | [Pansy](https://github.com/TheAnsarya/pansy) | 🌼 | Metadata Format | Symbols & Analysis |
 | [Poppy](https://github.com/TheAnsarya/poppy) | 🌸 | Assembler | Source → ROM |
@@ -55,6 +56,13 @@
 | Game | Status | Disasm | Metadata | Assets | Rebuild |
 |------|--------|--------|----------|--------|---------|
 | *Coming soon* | | | | | |
+
+### Atari Lynx Games
+| Game | Status | Disasm | Metadata | Assets | Rebuild |
+|------|--------|--------|----------|--------|---------|
+| [California Games](games/lynx/california-games/) | 🔄 | 🔄 | 🔄 | ❌ | ❌ |
+| [Chip's Challenge](games/lynx/chips-challenge/) | 🔄 | 🔄 | 🔄 | ❌ | ❌ |
+| [Test: Hello Lynx](games/lynx/hello-lynx/) | ✅ | ✅ | ✅ | N/A | ✅ |
 
 **Legend:** ✅ Complete | 🔄 In Progress | ❌ Not Started
 
@@ -126,9 +134,37 @@ game-garden/
 
 See [docs/adding-games.md](docs/adding-games.md) for detailed instructions.
 
+## 🔗 Integrated Pipeline
+
+Game Garden is the **meta-project** that ties the Flower Toolchain together into a continuous refinement loop:
+
+```
+Play (Nexen) → Debug → Export .pansy
+  → Disassemble (Peony) → Edit .pasm → Build (Poppy)
+  → Verify → Merge .pansy → Play Again → REPEAT
+```
+
+Each iteration enriches the metadata — the more you play, debug, and analyze, the better the disassembly becomes.
+
+| Stage | Tool | Input | Output |
+|-------|------|-------|--------|
+| 1-2. Play & Debug | [Nexen](https://github.com/TheAnsarya/Nexen) | ROM | CDL data, labels, comments |
+| 3. Export | Nexen → Pansy | Debug state | `.pansy` file |
+| 4. Disassemble | [Peony](https://github.com/TheAnsarya/peony) | ROM + `.pansy` | `.pasm` source + enriched `.pansy` |
+| 5. Edit | VS Code + Poppy Extension | `.pasm` files | Modified source |
+| 6. Build | [Poppy](https://github.com/TheAnsarya/poppy) | `.pasm` files | ROM + `.pansy` |
+| 7. Verify | Peony | Original + built ROM | Byte-identical ✓ |
+| 8. Merge | [Pansy CLI](https://github.com/TheAnsarya/pansy) | Multiple `.pansy` | Combined `.pansy` |
+| 9-10. Play & Debug Again | Nexen | ROM + merged `.pansy` | Richer analysis |
+
+**Pipeline documentation:** [~plans/integrated-pipeline-plan.md](~plans/integrated-pipeline-plan.md)
+**Pipeline scripts:** [tools/pipeline/](tools/pipeline/) *(planned)*
+**Detailed master plan:** [pansy ~Plans/integrated-pipeline-master-plan.md](https://github.com/TheAnsarya/pansy/blob/main/~Plans/integrated-pipeline-master-plan.md)
+
 ## 🔗 Related Projects
 
-- [🌸 Poppy](https://github.com/TheAnsarya/poppy) - Multi-system assembler
+- [� Nexen](https://github.com/TheAnsarya/Nexen) - Multi-system emulator with Pansy integration
+- [�🌸 Poppy](https://github.com/TheAnsarya/poppy) - Multi-system assembler
 - [🌺 Peony](https://github.com/TheAnsarya/peony) - Multi-system disassembler
 - [🌼 Pansy](https://github.com/TheAnsarya/pansy) - Metadata format & tools
 - [GameInfo](https://github.com/TheAnsarya/GameInfo) - ROM hacking toolkit
