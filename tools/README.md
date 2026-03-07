@@ -27,6 +27,18 @@ python tests/test_pipeline.py
 | [verify-rom.py](verify-rom.py) | Python | ROM checksum verification |
 | [extract-snes-assets.py](extract-snes-assets.py) | Python | SNES graphics/data extraction |
 
+### 🌷 Flower Toolchain Pipeline Scripts
+
+See [pipeline/README.md](pipeline/README.md) for full documentation.
+
+| Script | Description |
+|--------|-------------|
+| [pipeline-disassemble.ps1](pipeline/pipeline-disassemble.ps1) | Disassemble ROM with Peony + Pansy hints |
+| [pipeline-build.ps1](pipeline/pipeline-build.ps1) | Build ROM with Poppy + Pansy output |
+| [pipeline-verify.ps1](pipeline/pipeline-verify.ps1) | Byte-identical ROM verification |
+| [pipeline-merge.ps1](pipeline/pipeline-merge.ps1) | Merge multiple .pansy files |
+| [pipeline-full.ps1](pipeline/pipeline-full.ps1) | Full pipeline in one command |
+
 ## Pipeline Commands
 
 ### `info` - ROM Information
