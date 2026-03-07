@@ -364,6 +364,7 @@ pansy merge --base a.pansy --overlay b.pansy --output merged.pansy
 
 ## See Also
 
+- [Merge Workflow](MERGE-WORKFLOW.md) — How to merge Pansy metadata from multiple sources
 - [Adding Games](adding-games.md) — How to add a new game to the garden
 - [Master Pipeline Plan](https://github.com/TheAnsarya/pansy/blob/main/~Plans/integrated-pipeline-master-plan.md) — Detailed architecture
 - [Pansy File Format](https://github.com/TheAnsarya/pansy/blob/main/docs/FILE-FORMAT.md) — Binary format specification

@@ -11,6 +11,7 @@ Welcome to the Game Garden documentation! This guide covers everything you need 
 
 ### Workflow Guides
 - [🌷 Pipeline Guide](PIPELINE-GUIDE.md) - **Complete Flower Toolchain workflow** (play → debug → disassemble → edit → build → verify)
+- [🌼 Merge Workflow](MERGE-WORKFLOW.md) - Merging Pansy metadata from multiple sources
 - [Adding a New Game](adding-games.md) - Step-by-step game setup
 - [Disassembly Workflow](disassembly.md) - Using Peony for disassembly
 - [Asset Extraction](asset-extraction.md) - Extracting and converting assets
