@@ -171,7 +171,17 @@ python tools/convert-assets.py --input assets/editable/ --output assets/binary/ 
 - Document function parameters and return values
 - Explain complex logic and algorithms
 
+### ⚠️ MANDATORY: Session Logs
+
+**Always create a session log at the end of every conversation that involves code changes, issue creation, or significant research.** This is non-negotiable.
+
+- File: `~docs/session-logs/YYYY-MM-DD-session-NN.md`
+- Increment `NN` if a log already exists for that date
+- Include: summary of work done, issues created/closed, commits made, files changed, and next steps
+- Commit the session log as part of the final commit
+
 ### Log Files
+
 - Chat logs: `~docs/chat-logs/YYYY-MM-DD-chat-NN.md`
 - Session logs: `~docs/session-logs/YYYY-MM-DD-session-NN.md`
 - **NEVER edit** `~docs/game-garden-manual-prompts-log.txt` (user-maintained)
