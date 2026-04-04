@@ -97,7 +97,7 @@ games/{platform}/{game-name}/
 
 ### Indentation & Whitespace
 - **ALWAYS use TABS for indentation** - Never spaces, in any file type
-- Tab width: 4 spaces (8 for assembly files)
+- Tab width: 4 spaces
 - Remove trailing whitespace from all lines
 - Include a blank line at the end of every file
 
