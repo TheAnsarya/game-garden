@@ -23,25 +23,19 @@ Legend: ✅ Complete | 🔄 In Progress | ❌ Not Started
 
 ## ⚠️ Known Issues
 
-### Peony → Poppy Roundtrip Blocked
-The current toolchain has issues preventing automatic rebuilds:
+### Peony → Poppy Roundtrip Status
 
-1. **Unknown Opcodes** ([peony#41](https://github.com/TheAnsarya/peony/issues/41))
-   - Peony outputs `???` for bytes that aren't valid opcodes (e.g., 0xFF)
-   - Poppy parser fails: "Unexpected character: '?'"
-   - Root cause: Data regions incorrectly decoded as code
+Previously blocking issues have been **resolved**:
 
-2. **CDL Not Used in Export** ([peony#42](https://github.com/TheAnsarya/peony/issues/42))
-   - `peony export --format pansy` doesn't support `--cdl` option
-   - Results in 0 code/data offsets in exported Pansy files
+1. ~~**Unknown Opcodes** ([peony#41](https://github.com/TheAnsarya/peony/issues/41))~~ — ✅ Fixed
+2. ~~**CDL Not Used in Export** ([peony#42](https://github.com/TheAnsarya/peony/issues/42))~~ — ✅ Fixed
+3. ~~**No Pansy Merge** ([pansy#16](https://github.com/TheAnsarya/pansy/issues/16))~~ — ✅ Merge functionality implemented
 
-3. **No Pansy Merge** ([pansy#16](https://github.com/TheAnsarya/pansy/issues/16))
-   - Existing ffmq.pansy has symbols but no code/data map
-   - CDL has code/data map but no symbols
-   - Need merge functionality to combine both
+### Remaining Work
 
-### Workaround
-The ffmq-info repository has a legacy ASAR-based build that works, but **game-garden uses Poppy exclusively**. The Peony issues above must be fixed to enable the Poppy pipeline.
+- Re-run full pipeline with latest Peony/Poppy/Pansy to verify roundtrip
+- Generate fresh disassembly with CDL-enriched Pansy metadata
+- Verify byte-identical rebuild through Poppy
 
 > **Policy:** All game-garden builds use 🌸 Poppy. Legacy assemblers (ASAR, ca65, xkas) are not used in mainline pipelines.
 

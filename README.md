@@ -63,6 +63,9 @@
 | [California Games](games/lynx/california-games/) | 🔄 | 🔄 | 🔄 | ❌ | ❌ |
 | [Chip's Challenge](games/lynx/chips-challenge/) | 🔄 | 🔄 | 🔄 | ❌ | ❌ |
 | [Test: Hello Lynx](games/lynx/hello-lynx/) | ✅ | ✅ | ✅ | N/A | ✅ |
+| [Test: 65SC02 Opcodes](games/lynx/test-65sc02-opcodes/) | ✅ | ✅ | ✅ | N/A | ✅ |
+| [Test: Addressing Modes](games/lynx/test-addressing-modes/) | ✅ | ✅ | ✅ | N/A | ✅ |
+| [Test: Hardware Regs](games/lynx/test-hardware-regs/) | ✅ | ✅ | ✅ | N/A | ✅ |
 
 **Legend:** ✅ Complete | 🔄 In Progress | ❌ Not Started
 
@@ -80,8 +83,7 @@ game-garden/
 └── games/                  # Game projects
     ├── nes/                # NES games
     ├── snes/               # SNES games
-    ├── gb/                 # Game Boy games
-    └── gba/                # GBA games
+    └── lynx/               # Atari Lynx games
 ```
 
 ## 🚀 Quick Start
@@ -158,13 +160,13 @@ Each iteration enriches the metadata — the more you play, debug, and analyze, 
 | 9-10. Play & Debug Again | Nexen | ROM + merged `.pansy` | Richer analysis |
 
 **Pipeline documentation:** [~plans/integrated-pipeline-plan.md](~plans/integrated-pipeline-plan.md)
-**Pipeline scripts:** [tools/pipeline/](tools/pipeline/) *(planned)*
+**Pipeline scripts:** [tools/pipeline/](tools/pipeline/)
 **Detailed master plan:** [pansy ~Plans/integrated-pipeline-master-plan.md](https://github.com/TheAnsarya/pansy/blob/main/~Plans/integrated-pipeline-master-plan.md)
 
 ## 🔗 Related Projects
 
-- [� Nexen](https://github.com/TheAnsarya/Nexen) - Multi-system emulator with Pansy integration
-- [�🌸 Poppy](https://github.com/TheAnsarya/poppy) - Multi-system assembler
+- [🎮 Nexen](https://github.com/TheAnsarya/Nexen) - Multi-system emulator with Pansy integration
+- [🌸 Poppy](https://github.com/TheAnsarya/poppy) - Multi-system assembler
 - [🌺 Peony](https://github.com/TheAnsarya/peony) - Multi-system disassembler
 - [🌼 Pansy](https://github.com/TheAnsarya/pansy) - Metadata format & tools
 - [GameInfo](https://github.com/TheAnsarya/GameInfo) - ROM hacking toolkit
@@ -176,7 +178,7 @@ MIT License - See [LICENSE](LICENSE) for details.
 
 ## 🤝 Contributing
 
-Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
+Contributions welcome! See the [copilot instructions](.github/copilot-instructions.md) for coding standards.
 
 ---
 
