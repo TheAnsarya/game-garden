@@ -23,12 +23,23 @@
 - [ ] Super Metroid (SNES)
 - [ ] A Link to the Past (SNES)
 
-## Priority 5: Game Boy
+## Priority 5: Atari Lynx
+
+- [x] **Hello Lynx** (Lynx) - Test ROM ✅ Complete
+- [x] **Test: 65SC02 Opcodes** (Lynx) - CPU instruction test ROM ✅ Complete
+- [x] **Test: Addressing Modes** (Lynx) - CPU addressing mode test ROM ✅ Complete
+- [x] **Test: Hardware Regs** (Lynx) - Hardware register test ROM ✅ Complete
+- [ ] **California Games** (Lynx) - In progress
+- [ ] **Chip's Challenge** (Lynx) - In progress
+
+## Priority 6: Game Boy
+
 - [ ] Pokemon Red/Blue (GB)
 - [ ] Legend of Zelda: Link's Awakening (GB)
 - [ ] Metroid II (GB)
 
-## Priority 6: GBA
+## Priority 7: GBA
+
 - [ ] Final Fantasy Tactics Advance (GBA)
 - [ ] Fire Emblem (GBA)
 
