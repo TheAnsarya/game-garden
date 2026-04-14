@@ -1,6 +1,6 @@
 # 🗺️ Game Garden Roadmap
 
-*Last Updated: 2026-01-23*
+*Last Updated: 2026-04-13*
 
 ## Phase 1: Foundation ✅
 - [x] Repository structure
@@ -16,8 +16,8 @@
 - [x] Pansy metadata (2,928 symbols, 1,797 comments)
 - [x] Extract all assets (graphics, data, text)
 - [ ] **BLOCKED:** Rebuild byte-identical via Poppy
-  - See [peony#41](https://github.com/TheAnsarya/peony/issues/41) - Unknown opcodes
-  - See [peony#42](https://github.com/TheAnsarya/peony/issues/42) - CDL export
+  - ~~See [peony#41](https://github.com/TheAnsarya/peony/issues/41) - Unknown opcodes~~ ✅ Fixed
+  - ~~See [peony#42](https://github.com/TheAnsarya/peony/issues/42) - CDL export~~ ✅ Fixed
   - See [ffmq-info#91](https://github.com/TheAnsarya/ffmq-info/issues/91) - Migrate ffmq-info to Poppy
 
 ### Dragon Warrior (NES)
@@ -32,8 +32,8 @@
 - [ ] Rebuild byte-identical
 
 ## Phase 3: Fix Toolchain Blockers
-- [ ] [peony#41](https://github.com/TheAnsarya/peony/issues/41): Handle unknown opcodes as .db
-- [ ] [peony#42](https://github.com/TheAnsarya/peony/issues/42): Add CDL support to export
+- [x] [peony#41](https://github.com/TheAnsarya/peony/issues/41): Handle unknown opcodes as .db
+- [x] [peony#42](https://github.com/TheAnsarya/peony/issues/42): Add CDL support to export
 - [ ] [pansy#16](https://github.com/TheAnsarya/pansy/issues/16): Pansy file merge functionality
 - [ ] Test end-to-end: ROM → Peony → Pansy → Poppy → ROM ✓
 
