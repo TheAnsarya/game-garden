@@ -1,4 +1,4 @@
-# 🌱 Game Garden - CI Pipeline
+﻿# 🌱 Game Garden - CI Pipeline
 # Runs automated tests on push and pull requests
 
 name: Test Pipeline
