@@ -52,6 +52,7 @@
 |------|--------|--------|----------|--------|---------|
 | [Final Fantasy II](games/snes/ff2/) | 🔄 | ✅ 1634 blocks | ✅ Pansy | ✅ CHR + text scan | ✅ |
 | [Final Fantasy: Mystic Quest](games/snes/ffmq/) | 🔄 | ✅ 1826 blocks | ✅ Pansy | ✅ Full | ❌ |
+| [Zelda 3: A Link to the Past](games/snes/zelda3/) | 🔄 | 🔄 Initial | 🔄 Pansy | ❌ | ❌ |
 
 ### Game Boy Games
 | Game | Status | Disasm | Metadata | Assets | Rebuild |

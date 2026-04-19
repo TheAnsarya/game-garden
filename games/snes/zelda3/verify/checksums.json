@@ -1,0 +1,13 @@
+﻿{
+	"name": "The Legend of Zelda: A Link to the Past",
+	"platform": "snes",
+	"region": "US",
+	"version": "1.0",
+	"crc32": "777aac2f",
+	"md5": "608c22b8ff930c62dc2de54bcd6eba72",
+	"sha256": "66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517cb361f7316009cfb",
+	"size": 1048576,
+	"romFile": "Legend of Zelda, The - A Link to the Past (1992)(Nintendo)(US).smc",
+	"cdlFile": null,
+	"notes": "US 1.0 release - 8Mbit (1MB) HiROM"
+}

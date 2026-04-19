@@ -1,0 +1,15 @@
+﻿{
+	"$schema": "https://game-garden.example.com/schemas/extraction-config.json",
+	"game": {
+		"name": "The Legend of Zelda: A Link to the Past",
+		"platform": "snes",
+		"region": "US",
+		"version": "1.0"
+	},
+	"rom": {
+		"size": 1048576,
+		"header": false,
+		"mapping": "hirom"
+	},
+	"notes": "Zelda 3 is an 8Mbit (1MB) HiROM game. No CDL available yet - using heuristic extraction."
+}

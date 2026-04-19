@@ -1,0 +1,23 @@
+﻿{
+	"$schema": "https://game-garden.example.com/schemas/build-config.json",
+	"project": {
+		"name": "The Legend of Zelda: A Link to the Past",
+		"shortName": "zelda3",
+		"platform": "snes",
+		"version": "1.0.0"
+	},
+	"source": {
+		"assembler": "poppy",
+		"mainFile": "src/main.pasm",
+		"includes": ["src/", "src/includes/"],
+		"outputRom": "build/zelda3.sfc"
+	},
+	"assets": {
+		"extractDir": "assets/extracted",
+		"editableDir": "assets/editable",
+		"binaryDir": "assets/binary"
+	},
+	"metadata": {
+		"pansyFile": "metadata/zelda3.pansy"
+	}
+}
