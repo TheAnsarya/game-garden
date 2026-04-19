@@ -13,7 +13,7 @@
 | ROM Verified | ✅ | CRC32: `777aac2f`, SHA256 verified |
 | Disassembly | ✅ | 633 blocks, 34,802 bytes code, 66,592 lines (all-banks mode) |
 | Metadata | ✅ | 215 labels exported to `zelda3.pansy` |
-| Graphics | ✅ | 49 tilesets (20,496 tiles) extracted as PNG, reconverted to `.inc` |
+| Graphics | ✅ | 49 tilesets (20,496 tiles) extracted as PNG, reconverted to `.inc-graphics` |
 | Text | ❌ | Not yet extracted (needs CDL or manual analysis) |
 | Data | ❌ | Not yet extracted (needs CDL or manual analysis) |
 | Rebuild | ✅ | Byte-identical output confirmed via SHA256 |
@@ -24,13 +24,13 @@ Legend: ✅ Complete | 🔄 In Progress | ❌ Not Started
 
 ### Asset Reconversion
 
-The build script (`build.ps1`) automatically reconverts editable assets back into includable `.inc` files:
+The build script (`build.ps1`) automatically reconverts editable assets into purpose-specific include files:
 
-- **JSON data** → `.inc` via `poppy data-gen` (`.db` commands)
-- **PNG graphics** → `.inc` via `poppy gfx-convert` (CHR tile data as `.db`)
-- **Text** → `.inc` via `poppy text-encode` (encoded bytes as `.db`)
+- **JSON data** → `.inc-<purpose>` via `poppy data-gen` (`.db` commands)
+- **PNG graphics** → `.inc-graphics` via `poppy gfx-convert` (CHR tile data as `.db`)
+- **Text/dialog** → `.inc-<purpose>` via `poppy text-encode` (encoded bytes as `.db`)
 
-These `.inc` files are included in the main disassembly source and assembled by Poppy.
+Examples: `.inc-graphics`, `.inc-maps`, `.inc-dialog`, `.inc-events`, `.inc-stats`.
 
 ### Build
 
@@ -59,14 +59,14 @@ All graphics in `assets/editable/graphics/` (49 tilesets, 20,496 tiles):
 
 | Tileset | Offset | Size |
 |---------|--------|------|
-| `tileset_000_000000.png` | `$000000` | 290.9 KB (.inc) |
-| `tileset_001_011c00.png` | `$011c00` | 14.6 KB (.inc) |
-| `tileset_002_013c00.png` | `$013c00` | 96.9 KB (.inc) |
-| `tileset_003_01b000.png` | `$01b000` | 107.7 KB (.inc) |
+| `tileset_000_000000.png` | `$000000` | 290.9 KB (.inc-graphics) |
+| `tileset_001_011c00.png` | `$011c00` | 14.6 KB (.inc-graphics) |
+| `tileset_002_013c00.png` | `$013c00` | 96.9 KB (.inc-graphics) |
+| `tileset_003_01b000.png` | `$01b000` | 107.7 KB (.inc-graphics) |
 | ... | ... | ... |
-| `tileset_048_0ffc00.png` | `$0ffc00` | 14.6 KB (.inc) |
+| `tileset_048_0ffc00.png` | `$0ffc00` | 14.6 KB (.inc-graphics) |
 
-All 49 tilesets are editable PNGs that reconvert to `.byte` directive `.inc` files via `reconvert-assets.ps1`.
+All 49 tilesets are editable PNGs that reconvert to `.byte` directive `.inc-graphics` files via `reconvert-assets.ps1`.
 
 ## 🎨 Extracted Palettes
 
@@ -79,11 +79,11 @@ All 49 tilesets are editable PNGs that reconvert to `.byte` directive `.inc` fil
 - 633 blocks disassembled, 34,802 bytes of code identified (~3.3% of ROM as code)
 - A CDL file from Nexen would significantly improve disassembly quality and enable data/text extraction
 - The game uses DMA-based graphics transfer, compressed tilesets, and a custom text engine
-- 2 instructions required manual `.db` workaround due to Poppy `jsr.w ($addr,x)` bug where addr < `$100`
+- `.inc-<purpose>` naming is used for reconverted asset include files (`graphics`, `maps`, `dialog`, `events`, `stats`, etc.)
 
 ## ⚠️ Known Issues
 
-- **Poppy bug:** `jsr.w ($0082,x)` and `jsr.w ($0069,x)` fail because Poppy treats addresses < `$100` as zero-page, preventing promotion to `AbsoluteIndexedIndirect`. Workaround: replaced with `.db $fc, $82, $00` and `.db $fc, $69, $00` directives in `src/main.pasm`.
+- **Poppy bug tracking:** `jsr.w ($addr,x)` zero-page promotion behavior tracked/fixed in `TheAnsarya/poppy#330`. Existing local `.db` workarounds in disassembly can be cleaned up in a follow-up pass.
 
 > **Policy:** All game-garden builds use 🌸 Poppy. Legacy assemblers (ASAR, ca65, xkas) are not used in mainline pipelines.
 

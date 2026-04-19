@@ -4,7 +4,7 @@
 
 .DESCRIPTION
 	Assembles the disassembled source back into a ROM file using Poppy.
-	Also reconverts editable assets back to binary .inc files.
+	Also reconverts editable assets back to binary .inc-<purpose> files.
 
 .PARAMETER Clean
 	Clean build output before building.
@@ -27,45 +27,13 @@ if ($Clean) {
 	Remove-Item -Path "$ScriptDir\assets\binary\*" -Recurse -Force -ErrorAction SilentlyContinue
 }
 
-# Step 1: Reconvert editable assets to binary .inc files
+# Step 1: Reconvert editable assets to binary .inc-<purpose> files
 Write-Host "   📦 Reconverting assets..." -ForegroundColor Cyan
 
-# Convert JSON data files to .pasm .inc files
-$dataDir = "$ScriptDir\assets\editable\data"
-$binaryDir = "$ScriptDir\assets\binary\data"
-if (Test-Path $dataDir) {
-	New-Item -ItemType Directory -Path $binaryDir -Force | Out-Null
-	Get-ChildItem "$dataDir\*.json" | ForEach-Object {
-		$outName = $_.BaseName + ".inc"
-		Write-Host "      data-gen: $($_.Name) -> $outName" -ForegroundColor Gray
-		dotnet run --project "$PoppyDir\src\Poppy.CLI" -c Release --no-build -- data-gen $_.FullName -o "$binaryDir\$outName" --name $_.BaseName
-	}
-}
-
-# Convert PNG graphics to CHR binary .inc files
-$gfxDir = "$ScriptDir\assets\editable\graphics"
-$binaryGfxDir = "$ScriptDir\assets\binary\graphics"
-if (Test-Path $gfxDir) {
-	New-Item -ItemType Directory -Path $binaryGfxDir -Force | Out-Null
-	Get-ChildItem "$gfxDir\*.png" | ForEach-Object {
-		$outName = $_.BaseName + ".inc"
-		Write-Host "      gfx-convert: $($_.Name) -> $outName" -ForegroundColor Gray
-		dotnet run --project "$PoppyDir\src\Poppy.CLI" -c Release --no-build -- gfx-convert $_.FullName -o "$binaryGfxDir\$outName" --tile-format snes4 --format pasm --name $_.BaseName
-	}
-}
-
-# Convert text files to encoded binary .inc files
-$textDir = "$ScriptDir\assets\editable\text"
-$binaryTextDir = "$ScriptDir\assets\binary\text"
-if (Test-Path $textDir) {
-	New-Item -ItemType Directory -Path $binaryTextDir -Force | Out-Null
-	Get-ChildItem "$textDir\*.txt" | ForEach-Object {
-		if (Test-Path "$textDir\zelda3.tbl") {
-			$outName = $_.BaseName + ".inc"
-			Write-Host "      text-encode: $($_.Name) -> $outName" -ForegroundColor Gray
-			dotnet run --project "$PoppyDir\src\Poppy.CLI" -c Release --no-build -- text-encode -i $_.FullName --table "$textDir\zelda3.tbl" -o "$binaryTextDir\$outName" --format asm
-		}
-	}
+& "$ScriptDir\reconvert-assets.ps1" -PoppyDir $PoppyDir
+if ($LASTEXITCODE -ne 0) {
+	Write-Host "❌ Asset reconversion failed!" -ForegroundColor Red
+	exit 1
 }
 
 # Step 2: Assemble with Poppy

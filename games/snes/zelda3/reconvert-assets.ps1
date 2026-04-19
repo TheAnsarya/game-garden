@@ -1,10 +1,10 @@
 ﻿<#
 .SYNOPSIS
-	Reconverts editable assets back to binary .inc files for assembly.
+	Reconverts editable assets back to binary .inc-<purpose> files for assembly.
 
 .DESCRIPTION
 	Converts PNG graphics, JSON data, and text files back into
-	.pasm-format .inc files with .db commands that can be .include'd
+	.pasm-format .inc-<purpose> files with .db commands that can be .include'd
 	in the main disassembly source.
 
 .PARAMETER PoppyDir
@@ -20,9 +20,35 @@ $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $EditableDir = "$ScriptDir\assets\editable"
 $BinaryDir = "$ScriptDir\assets\binary"
 
-Write-Host "📦 Reconverting editable assets to binary .inc files..." -ForegroundColor Cyan
+function Get-PurposeName {
+	param(
+		[System.IO.FileInfo]$File,
+		[string]$RootDir,
+		[string]$DefaultPurpose
+	)
 
-# ─── Graphics (PNG → BMP → CHR → .inc) ─────────────────────────────
+	$relativeDir = [System.IO.Path]::GetRelativePath($RootDir, $File.DirectoryName)
+	if ($relativeDir -eq ".") {
+		return $DefaultPurpose
+	}
+
+	$firstSegment = ($relativeDir -split '[\\/]')[0]
+	if ([string]::IsNullOrWhiteSpace($firstSegment) -or $firstSegment -eq ".") {
+		return $DefaultPurpose
+	}
+
+	$purpose = $firstSegment.ToLowerInvariant()
+	$purpose = ($purpose -replace '[^a-z0-9\-]', '-')
+	if ([string]::IsNullOrWhiteSpace($purpose)) {
+		return $DefaultPurpose
+	}
+
+	return $purpose
+}
+
+Write-Host "📦 Reconverting editable assets to binary .inc-<purpose> files..." -ForegroundColor Cyan
+
+# ─── Graphics (PNG → BMP → CHR → .inc-graphics) ─────────────────────
 $gfxDir = "$EditableDir\graphics"
 $binaryGfxDir = "$BinaryDir\graphics"
 $gfxCount = 0
@@ -35,7 +61,7 @@ if (Test-Path $gfxDir) {
 		# Determine BPP from extraction metadata in filename
 		# tileset_NNN_OFFSET.png — look up the extraction-config or use default 4bpp
 		$bmpPath = [System.IO.Path]::ChangeExtension($png.FullName, ".bmp")
-		$incName = $png.BaseName + ".inc"
+		$incName = $png.BaseName + ".inc-graphics"
 		$incPath = "$binaryGfxDir\$incName"
 
 		# Convert PNG to BMP using .NET System.Drawing
@@ -49,7 +75,7 @@ if (Test-Path $gfxDir) {
 			continue
 		}
 
-		# Convert BMP to .inc (PASM format with .db commands)
+		# Convert BMP to .inc-graphics (PASM format with .db commands)
 		Write-Host "   🎨 $($png.Name) → $incName" -ForegroundColor Gray
 		dotnet run --project "$PoppyDir\src\Poppy.CLI" -c Release --no-build -- gfx-convert $bmpPath -o $incPath --tile-format snes4 --format pasm --name $png.BaseName 2>&1
 
@@ -66,18 +92,23 @@ if (Test-Path $gfxDir) {
 
 Write-Host "   ✅ Graphics: $gfxCount files converted" -ForegroundColor Green
 
-# ─── Data (JSON → .inc) ────────────────────────────────────────────
+# ─── Data (JSON → .inc-<purpose>) ───────────────────────────────────
 $dataDir = "$EditableDir\data"
 $binaryDataDir = "$BinaryDir\data"
 $dataCount = 0
 
 if (Test-Path $dataDir) {
-	$jsons = Get-ChildItem "$dataDir\*.json" -ErrorAction SilentlyContinue
+	$jsons = Get-ChildItem "$dataDir\*.json" -Recurse -ErrorAction SilentlyContinue
 	if ($jsons) {
 		New-Item -ItemType Directory -Path $binaryDataDir -Force | Out-Null
 		foreach ($json in $jsons) {
-			$incName = $json.BaseName + ".inc"
-			$incPath = "$binaryDataDir\$incName"
+			$relativeDir = [System.IO.Path]::GetRelativePath($dataDir, $json.DirectoryName)
+			$outDir = if ($relativeDir -eq ".") { $binaryDataDir } else { Join-Path $binaryDataDir $relativeDir }
+			New-Item -ItemType Directory -Path $outDir -Force | Out-Null
+
+			$purpose = Get-PurposeName -File $json -RootDir $dataDir -DefaultPurpose "data"
+			$incName = "$($json.BaseName).inc-$purpose"
+			$incPath = Join-Path $outDir $incName
 
 			Write-Host "   📊 $($json.Name) → $incName" -ForegroundColor Gray
 			dotnet run --project "$PoppyDir\src\Poppy.CLI" -c Release --no-build -- data-gen $json.FullName -o $incPath --name $json.BaseName 2>&1
@@ -93,19 +124,24 @@ if (Test-Path $dataDir) {
 
 Write-Host "   ✅ Data: $dataCount files converted" -ForegroundColor Green
 
-# ─── Text (TXT + TBL → .inc) ───────────────────────────────────────
+# ─── Text (TXT + TBL → .inc-<purpose>) ──────────────────────────────
 $textDir = "$EditableDir\text"
 $binaryTextDir = "$BinaryDir\text"
 $textCount = 0
 
 if (Test-Path $textDir) {
-	$tblFile = Get-ChildItem "$textDir\*.tbl" -ErrorAction SilentlyContinue | Select-Object -First 1
-	$txts = Get-ChildItem "$textDir\*.txt" -ErrorAction SilentlyContinue
+	$tblFile = Get-ChildItem "$textDir\*.tbl" -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
+	$txts = Get-ChildItem "$textDir\*.txt" -Recurse -ErrorAction SilentlyContinue
 	if ($tblFile -and $txts) {
 		New-Item -ItemType Directory -Path $binaryTextDir -Force | Out-Null
 		foreach ($txt in $txts) {
-			$incName = $txt.BaseName + ".inc"
-			$incPath = "$binaryTextDir\$incName"
+			$relativeDir = [System.IO.Path]::GetRelativePath($textDir, $txt.DirectoryName)
+			$outDir = if ($relativeDir -eq ".") { $binaryTextDir } else { Join-Path $binaryTextDir $relativeDir }
+			New-Item -ItemType Directory -Path $outDir -Force | Out-Null
+
+			$purpose = Get-PurposeName -File $txt -RootDir $textDir -DefaultPurpose "dialog"
+			$incName = "$($txt.BaseName).inc-$purpose"
+			$incPath = Join-Path $outDir $incName
 
 			Write-Host "   📝 $($txt.Name) → $incName" -ForegroundColor Gray
 			dotnet run --project "$PoppyDir\src\Poppy.CLI" -c Release --no-build -- text-encode -i $txt.FullName --table $tblFile.FullName -o $incPath --format asm 2>&1
