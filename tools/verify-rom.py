@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 ROM Verification Tool
 Verifies ROM files against expected checksums (CRC32, MD5, SHA256).
@@ -117,7 +117,7 @@ def main():
 		print(f"Error: Checksums file not found: {args.checksums}", file=sys.stderr)
 		sys.exit(1)
 
-	with open(args.checksums, 'r', encoding='utf-8') as f:
+	with open(args.checksums, 'r', encoding='utf-8-sig') as f:
 		checksums = json.load(f)
 
 	passed, errors = verify_rom(args.rom, checksums)

@@ -1,0 +1,22 @@
+﻿{
+	"platform": "snes",
+	"rom": "C:\\~reference-roms\\Final Fantasy II (U) (V1.1).smc",
+	"chr": [
+		{ "offset": "0x000000", "size": "0x8000", "bits": 4, "output": "assets/editable/graphics/ff2_chr_000000.bmp" },
+		{ "offset": "0x020000", "size": "0x8000", "bits": 4, "output": "assets/editable/graphics/ff2_chr_020000.bmp" },
+		{ "offset": "0x040000", "size": "0x8000", "bits": 4, "output": "assets/editable/graphics/ff2_chr_040000.bmp" },
+		{ "offset": "0x060000", "size": "0x8000", "bits": 4, "output": "assets/editable/graphics/ff2_chr_060000.bmp" }
+	],
+	"palette": {
+		"offset": "0x000000",
+		"count": 256,
+		"format": "snes",
+		"output": "assets/editable/palettes/ff2_palette_000000.json"
+	},
+	"text": {
+		"scan": true,
+		"minLength": 4,
+		"format": "json",
+		"output": "assets/editable/text/ff2_text_scan.json"
+	}
+}

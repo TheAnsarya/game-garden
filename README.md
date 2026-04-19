@@ -1,4 +1,4 @@
-# 🌱 Game Garden
+﻿# 🌱 Game Garden
 
 > *Where ROMs bloom into source code and back again*
 
@@ -50,6 +50,7 @@
 ### SNES Games
 | Game | Status | Disasm | Metadata | Assets | Rebuild |
 |------|--------|--------|----------|--------|---------|
+| [Final Fantasy II](games/snes/ff2/) | 🔄 | ✅ 1634 blocks | ✅ Pansy | ✅ CHR + text scan | ✅ |
 | [Final Fantasy: Mystic Quest](games/snes/ffmq/) | 🔄 | ✅ 1826 blocks | ✅ Pansy | ✅ Full | ❌ |
 
 ### Game Boy Games

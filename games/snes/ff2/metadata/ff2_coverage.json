@@ -1,0 +1,352 @@
+﻿{
+  "generated": "2026-04-19T00:38:53.0476627Z",
+  "totalBytes": 1048576,
+  "classified": {
+    "code": {
+      "bytes": 65962,
+      "percentage": 6.3
+    },
+    "data": {
+      "bytes": 0,
+      "percentage": 0
+    },
+    "graphics": {
+      "bytes": 0,
+      "percentage": 0
+    },
+    "unknown": {
+      "bytes": 982614,
+      "percentage": 93.7
+    }
+  },
+  "analysis": {
+    "labels": 8007,
+    "comments": 550,
+    "crossRefs": 10278,
+    "pointerTables": 550,
+    "blocks": 1634,
+    "entryPoints": 1634
+  },
+  "banks": [
+    {
+      "bank": 0,
+      "totalBytes": 17665,
+      "codeBytes": 17665,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 2139,
+      "blocks": 601
+    },
+    {
+      "bank": 1,
+      "totalBytes": 12565,
+      "codeBytes": 12565,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1668,
+      "blocks": 396
+    },
+    {
+      "bank": 2,
+      "totalBytes": 1143,
+      "codeBytes": 1143,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 165,
+      "blocks": 57
+    },
+    {
+      "bank": 3,
+      "totalBytes": 15775,
+      "codeBytes": 15775,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1729,
+      "blocks": 218
+    },
+    {
+      "bank": 4,
+      "totalBytes": 1930,
+      "codeBytes": 1930,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 171,
+      "blocks": 18
+    },
+    {
+      "bank": 5,
+      "totalBytes": 156,
+      "codeBytes": 156,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 7,
+      "blocks": 3
+    },
+    {
+      "bank": 6,
+      "totalBytes": 7,
+      "codeBytes": 7,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1,
+      "blocks": 1
+    },
+    {
+      "bank": 7,
+      "totalBytes": 91,
+      "codeBytes": 91,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 3,
+      "blocks": 2
+    },
+    {
+      "bank": 8,
+      "totalBytes": 131,
+      "codeBytes": 131,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 8,
+      "blocks": 4
+    },
+    {
+      "bank": 9,
+      "totalBytes": 2,
+      "codeBytes": 2,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1,
+      "blocks": 1
+    },
+    {
+      "bank": 10,
+      "totalBytes": 2,
+      "codeBytes": 2,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1,
+      "blocks": 1
+    },
+    {
+      "bank": 11,
+      "totalBytes": 31,
+      "codeBytes": 31,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 6,
+      "blocks": 2
+    },
+    {
+      "bank": 12,
+      "totalBytes": 2,
+      "codeBytes": 2,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1,
+      "blocks": 1
+    },
+    {
+      "bank": 13,
+      "totalBytes": 2,
+      "codeBytes": 2,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1,
+      "blocks": 1
+    },
+    {
+      "bank": 14,
+      "totalBytes": 8,
+      "codeBytes": 8,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1,
+      "blocks": 1
+    },
+    {
+      "bank": 15,
+      "totalBytes": 34,
+      "codeBytes": 34,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1,
+      "blocks": 1
+    },
+    {
+      "bank": 16,
+      "totalBytes": 2,
+      "codeBytes": 2,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1,
+      "blocks": 1
+    },
+    {
+      "bank": 17,
+      "totalBytes": 2,
+      "codeBytes": 2,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1,
+      "blocks": 1
+    },
+    {
+      "bank": 18,
+      "totalBytes": 2,
+      "codeBytes": 2,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1,
+      "blocks": 1
+    },
+    {
+      "bank": 19,
+      "totalBytes": 3686,
+      "codeBytes": 3686,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 289,
+      "blocks": 65
+    },
+    {
+      "bank": 20,
+      "totalBytes": 539,
+      "codeBytes": 539,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 32,
+      "blocks": 17
+    },
+    {
+      "bank": 21,
+      "totalBytes": 10548,
+      "codeBytes": 10548,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 764,
+      "blocks": 195
+    },
+    {
+      "bank": 22,
+      "totalBytes": 2,
+      "codeBytes": 2,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1,
+      "blocks": 1
+    },
+    {
+      "bank": 23,
+      "totalBytes": 2,
+      "codeBytes": 2,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1,
+      "blocks": 1
+    },
+    {
+      "bank": 24,
+      "totalBytes": 929,
+      "codeBytes": 929,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 41,
+      "blocks": 12
+    },
+    {
+      "bank": 25,
+      "totalBytes": 226,
+      "codeBytes": 226,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 26,
+      "blocks": 10
+    },
+    {
+      "bank": 26,
+      "totalBytes": 2,
+      "codeBytes": 2,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1,
+      "blocks": 1
+    },
+    {
+      "bank": 27,
+      "totalBytes": 59,
+      "codeBytes": 59,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 8,
+      "blocks": 3
+    },
+    {
+      "bank": 28,
+      "totalBytes": 3,
+      "codeBytes": 3,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1,
+      "blocks": 1
+    },
+    {
+      "bank": 29,
+      "totalBytes": 2,
+      "codeBytes": 2,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 1,
+      "blocks": 1
+    },
+    {
+      "bank": 30,
+      "totalBytes": 411,
+      "codeBytes": 411,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 32,
+      "blocks": 14
+    },
+    {
+      "bank": 31,
+      "totalBytes": 3,
+      "codeBytes": 3,
+      "dataBytes": 0,
+      "graphicsBytes": 0,
+      "unknownBytes": 0,
+      "labels": 2,
+      "blocks": 2
+    }
+  ]
+}

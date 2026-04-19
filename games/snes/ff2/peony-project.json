@@ -1,0 +1,44 @@
+﻿{
+  "formatVersion": "1.0.0",
+  "name": "ff2",
+  "displayName": "Ff2",
+  "description": "Disassembly of Final Fantasy II (U) (V1.1).smc (SNES)",
+  "author": "",
+  "created": "2026-04-19T00:38:52.7765566Z",
+  "modified": "2026-04-19T00:38:52.7766272Z",
+  "rom": {
+    "filename": "rom/Final Fantasy II (U) (V1.1).smc",
+    "platform": "snes",
+    "crc32": "23084fcd",
+    "sha256": "414bacc05a18a6137c0de060b4094ab6d1b75105342b0bb36a42e45d945a0e4d",
+    "size": 1048576,
+    "mapper": "FINAL FANTASY 2",
+    "includeRom": true
+  },
+  "analysis": {
+    "pansy": "analysis/ff2.pansy",
+    "coverage": "analysis/coverage.json",
+    "crossRefs": "analysis/cross-refs.json"
+  },
+  "source": {
+    "entry": "src/main.pasm"
+  },
+  "statistics": {
+    "totalBytes": 1048576,
+    "codeBytes": 65962,
+    "dataBytes": 0,
+    "graphicsBytes": 0,
+    "unknownBytes": 982614,
+    "labelCount": 8007,
+    "commentCount": 550,
+    "crossRefCount": 10278,
+    "blockCount": 1634
+  },
+  "settings": {
+    "splitBanks": true,
+    "extractAssets": true,
+    "generateIncludes": true,
+    "generateDocs": true,
+    "includeRomInArchive": true
+  }
+}

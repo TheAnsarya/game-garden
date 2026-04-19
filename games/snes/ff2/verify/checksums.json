@@ -1,0 +1,13 @@
+﻿{
+	"name": "Final Fantasy II",
+	"platform": "snes",
+	"region": "US",
+	"version": "V1.1",
+	"crc32": "23084fcd",
+	"md5": "27d02a4f03e172e029c9b82ac3db79f7",
+	"sha256": "414bacc05a18a6137c0de060b4094ab6d1b75105342b0bb36a42e45d945a0e4d",
+	"size": 1048576,
+	"romFile": "Final Fantasy II (U) (V1.1).smc",
+	"cdlFile": "C:\\~reference-roms\\cdls\\Final Fantasy II (U) (V1.1).cdl",
+	"notes": "Checksums generated via tools/verify-rom.py --calculate"
+}

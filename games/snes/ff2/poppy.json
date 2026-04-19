@@ -1,0 +1,29 @@
+﻿{
+  "name": "ff2",
+  "version": "1.0.0",
+  "platform": "snes",
+  "entry": "src/main.pasm",
+  "output": "build/ff2.sfc",
+  "compiler": {
+    "target": "snes",
+    "options": {
+      "optimize": false,
+      "debug": false,
+      "warnings": "all"
+    }
+  },
+  "build": {
+    "includePaths": [
+      "include/"
+    ],
+    "defines": {}
+  },
+  "metadata": {
+    "description": "Disassembled by Peony",
+    "tags": [
+      "disassembly",
+      "snes",
+      "peony"
+    ]
+  }
+}
