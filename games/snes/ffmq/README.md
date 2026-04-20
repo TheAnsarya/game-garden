@@ -1,4 +1,4 @@
-# Final Fantasy: Mystic Quest
+﻿# Final Fantasy: Mystic Quest
 
 **Platform:** SNES (65816)
 **ROM:** Final Fantasy - Mystic Quest (U) (V1.1).sfc
@@ -130,8 +130,12 @@ All text tables in `assets/editable/text/`:
 ```
 ffmq/
 ├── src/                    # Disassembled source (.pasm) - see ffmq-info
+│   └── main-nexen.pasm     # Nexen CDL+Pansy disassembly (58K lines)
 ├── metadata/
 │   ├── ffmq.pansy          # Binary Pansy metadata (392 KB)
+│   ├── ffmq-nexen.pansy    # Nexen Pansy metadata (981 KB)
+│   ├── ffmq-nexen-coverage.cdl  # Nexen CDL (77.6% coverage)
+│   ├── ffmq-nexen.cdl      # Nexen CDL with header
 │   ├── ffmq_metadata.json  # Full JSON metadata (1 MB)
 │   ├── ffmq_symbols.txt    # Address=Symbol mappings (93 KB)
 │   └── ffmq_comments.txt   # Extracted comments (419 KB)
@@ -143,13 +147,18 @@ ffmq/
 ├── build/                  # Build output (gitignored)
 ├── verify/                 # ROM verification scripts
 │   └── checksums.json      # Expected ROM checksums
+├── tools/
+│   └── measure-quality.ps1 # Disassembly quality metrics
 └── docs/
-    └── rom-map.md          # Comprehensive ROM documentation
+    ├── rom-map.md          # Comprehensive ROM documentation
+    └── disassembly-quality-analysis.md  # Quality analysis (Peony #179)
 ```
 
 ## 🌼 Pansy Metadata
 
-The `metadata/` folder contains extracted symbols and comments from the ffmq-info disassembly:
+The `metadata/` folder contains extracted symbols and comments from multiple sources:
+
+### ffmq-info Disassembly
 
 | File | Size | Contents |
 |------|------|----------|
@@ -157,6 +166,18 @@ The `metadata/` folder contains extracted symbols and comments from the ffmq-inf
 | `ffmq_metadata.json` | 1 MB | Full JSON (symbols, comments, xrefs) |
 | `ffmq_symbols.txt` | 93 KB | 2,994 address=symbol pairs |
 | `ffmq_comments.txt` | 419 KB | 10,262 lines of documentation |
+
+### Nexen Game Package (2026-04-20)
+
+Exported from Nexen emulator after ~75% gameplay coverage:
+
+| File | Size | Contents |
+|------|------|----------|
+| `ffmq-nexen.pansy` | 981 KB | Pansy metadata (192 symbols, 2469 jump targets, 947 subs) |
+| `ffmq-nexen-coverage.cdl` | 512 KB | CDL - 73K code, 334K data (77.6% coverage) |
+| `ffmq-nexen.cdl` | 512 KB | CDL with 9-byte header |
+
+See [Disassembly Quality Analysis](docs/disassembly-quality-analysis.md) for bug findings (Peony #179).
 
 **Statistics:**
 - 2,928 symbols loaded
