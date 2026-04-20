@@ -174,8 +174,17 @@ Exported from Nexen emulator after ~75% gameplay coverage:
 | File | Size | Contents |
 |------|------|----------|
 | `ffmq-nexen.pansy` | 981 KB | Pansy metadata (192 symbols, 2469 jump targets, 947 subs) |
-| `ffmq-nexen-coverage.cdl` | 512 KB | CDL - 73K code, 334K data (77.6% coverage) |
-| `ffmq-nexen.cdl` | 512 KB | CDL with 9-byte header |
+| `ffmq-nexen-coverage.cdl` | 512 KB | Raw CDL map used for coverage analysis (canonical metrics source) |
+| `ffmq-nexen.cdl` | 512 KB | CDLv2 container (5-byte magic + 4-byte CRC32 + payload) |
+
+The two CDL files are related, but **not** duplicates.
+
+- `ffmq-nexen.cdl` has a 9-byte CDLv2 header.
+- After stripping the header, payload size matches `ffmq-nexen-coverage.cdl` (524,288 bytes), but content differs.
+- Comparison results: 131,530 differing bytes, with `ffmq-nexen-coverage.cdl` containing additional code/data-marked bytes and no positions where `ffmq-nexen.cdl` marks code/data that coverage does not.
+
+Use `ffmq-nexen-coverage.cdl` for quality metrics and reproducible coverage analysis.
+Keep `ffmq-nexen.cdl` for original Nexen package compatibility.
 
 See [Disassembly Quality Analysis](docs/disassembly-quality-analysis.md) for bug findings (Peony #179).
 

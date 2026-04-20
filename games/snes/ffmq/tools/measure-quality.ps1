@@ -1,4 +1,4 @@
-# FFMQ Disassembly Quality Metrics
+﻿# FFMQ Disassembly Quality Metrics
 # Parses .pasm output and reports key metrics
 # Usage: .\measure-quality.ps1 -PasmFile <path>
 
