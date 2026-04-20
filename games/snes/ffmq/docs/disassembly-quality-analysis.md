@@ -21,13 +21,6 @@ Exported from Nexen after ~75% playthrough:
   - 333,827 data bytes
   - 77.6% total coverage
   - 7,123 subroutines detected
-- **CDLv2** (`ffmq-nexen.cdl`): 524,297 bytes
-  - 9-byte header (`CDLv2` + CRC32) plus 524,288-byte payload
-  - Payload is **not identical** to `ffmq-nexen-coverage.cdl`
-  - 131,530 payload bytes differ
-  - Delta direction is one-way for code/data flags:
-    - Code: 7,928 bytes set only in `ffmq-nexen-coverage.cdl`, 0 only in `ffmq-nexen.cdl`
-    - Data: 123,581 bytes set only in `ffmq-nexen-coverage.cdl`, 0 only in `ffmq-nexen.cdl`
 - **Pansy** (`ffmq-nexen.pansy`): 981,168 bytes
   - 192 symbols
   - 2,469 jump targets
@@ -35,6 +28,8 @@ Exported from Nexen after ~75% playthrough:
   - 5 cross-references
   - 978 data type entries
   - 4 memory regions (LowRAM, PPU_Registers, CPU_Registers, WRAM)
+
+Canonical workflow note: `game-garden` now uses `ffmq-nexen-coverage.cdl` as the single CDL source for analysis and tooling.
 
 ## Disassembly Results
 

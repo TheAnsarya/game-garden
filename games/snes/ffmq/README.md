@@ -134,8 +134,7 @@ ffmq/
 ├── metadata/
 │   ├── ffmq.pansy          # Binary Pansy metadata (392 KB)
 │   ├── ffmq-nexen.pansy    # Nexen Pansy metadata (981 KB)
-│   ├── ffmq-nexen-coverage.cdl  # Nexen CDL (77.6% coverage)
-│   ├── ffmq-nexen.cdl      # Nexen CDL with header
+│   ├── ffmq-nexen-coverage.cdl  # Canonical Nexen CDL (77.6% coverage)
 │   ├── ffmq_metadata.json  # Full JSON metadata (1 MB)
 │   ├── ffmq_symbols.txt    # Address=Symbol mappings (93 KB)
 │   └── ffmq_comments.txt   # Extracted comments (419 KB)
@@ -174,17 +173,12 @@ Exported from Nexen emulator after ~75% gameplay coverage:
 | File | Size | Contents |
 |------|------|----------|
 | `ffmq-nexen.pansy` | 981 KB | Pansy metadata (192 symbols, 2469 jump targets, 947 subs) |
-| `ffmq-nexen-coverage.cdl` | 512 KB | Raw CDL map used for coverage analysis (canonical metrics source) |
-| `ffmq-nexen.cdl` | 512 KB | CDLv2 container (5-byte magic + 4-byte CRC32 + payload) |
+| `ffmq-nexen-coverage.cdl` | 512 KB | Canonical CDL map used for coverage analysis and tooling |
 
-The two CDL files are related, but **not** duplicates.
+CDL workflow is now consolidated to a single canonical file:
 
-- `ffmq-nexen.cdl` has a 9-byte CDLv2 header.
-- After stripping the header, payload size matches `ffmq-nexen-coverage.cdl` (524,288 bytes), but content differs.
-- Comparison results: 131,530 differing bytes, with `ffmq-nexen-coverage.cdl` containing additional code/data-marked bytes and no positions where `ffmq-nexen.cdl` marks code/data that coverage does not.
-
-Use `ffmq-nexen-coverage.cdl` for quality metrics and reproducible coverage analysis.
-Keep `ffmq-nexen.cdl` for original Nexen package compatibility.
+- Use `ffmq-nexen-coverage.cdl` for quality metrics and reproducible coverage analysis.
+- Historical CDLv2 package variants are not used in active `game-garden` workflows.
 
 See [Disassembly Quality Analysis](docs/disassembly-quality-analysis.md) for bug findings (Peony #179).
 
