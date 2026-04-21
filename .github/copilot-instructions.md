@@ -1,4 +1,4 @@
-# 🌱 Game Garden - AI Copilot Directives
+﻿# 🌱 Game Garden - AI Copilot Directives
 
 ## Project Overview
 
