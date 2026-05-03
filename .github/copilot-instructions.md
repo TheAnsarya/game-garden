@@ -256,6 +256,10 @@ Each game README should include:
 
 Legend: ✅ Complete | 🔄 In Progress | ❌ Not Started
 
+## Session Wrap-Up Directive
+
+- Always end every Copilot session response with concise, actionable suggestions for what to work on next.
+
 ## Markdown Formatting
 
 ### ⚠️ MANDATORY: Fix Markdownlint Warnings
